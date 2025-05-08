@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      title: 'Sabr',
+      title: 'Sabrr',
       home: SplashScreen(),
     );
   }
