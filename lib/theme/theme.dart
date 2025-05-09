@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeProvider with ChangeNotifier {
-  ThemeMode _themeMode = ThemeMode.light;
+  bool _isDarkTheme = false;
 
-  ThemeMode get themeMode => _themeMode;
+  bool get isDarkTheme => _isDarkTheme;
 
-  void toggleTheme() {
-    _themeMode =
-        _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
-    notifyListeners();
+  ThemeProvider() {
+    _loadTheme(); // Загружаем тему при инициализации
   }
 
   ThemeData get lightTheme => ThemeData(
@@ -37,17 +36,30 @@ class ThemeProvider with ChangeNotifier {
       foregroundColor: Colors.white, // Цвет текста AppBar
     ),
     bottomAppBarTheme: BottomAppBarTheme(color: Color(0xff191b1e)),
-
     scaffoldBackgroundColor: Color(0xff1f2023), // Цвет фона Scaffold
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: Colors.grey.shade500), // Цвет текста
-      bodyMedium: TextStyle(color: Colors.orange), // Цвет текста
+      bodyMedium: TextStyle(color: Colors.orange.shade300), // Цвет текста
       bodySmall: TextStyle(color: Colors.grey.shade300), // Цвет текста
     ),
-    drawerTheme: DrawerThemeData(
-      backgroundColor: Color(0xff1f2023),
-      // surfaceTintColor: Colors.red,
-    ),
+    drawerTheme: DrawerThemeData(backgroundColor: Color(0xff1f2023)),
     dividerTheme: DividerThemeData(color: Colors.grey.shade200),
   );
+
+  void toggleTheme() {
+    _isDarkTheme = !_isDarkTheme;
+    _saveTheme(); // Сохраняем тему
+    notifyListeners();
+  }
+
+  Future<void> _loadTheme() async {
+    final prefs = await SharedPreferences.getInstance();
+    _isDarkTheme = prefs.getBool('isDarkTheme') ?? false;
+    notifyListeners();
+  }
+
+  Future<void> _saveTheme() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isDarkTheme', _isDarkTheme);
+  }
 }

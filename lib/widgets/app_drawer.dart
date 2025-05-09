@@ -73,7 +73,7 @@ class AppDrawer extends StatelessWidget {
             inactiveThumbColor:
                 Colors.grey, // Цвет переключателя в неактивном состоянии
             inactiveTrackColor:
-                Colors.grey.shade400, // Цвет трека в неактивном состоянии
+                Colors.grey.shade100, // Цвет трека в неактивном состоянии
           ),
 
           Divider(
