@@ -613,6 +613,8 @@ class _JavshannPageState extends State<JavshannPage> {
             // Левая половина для перехода на предыдущую страницу
             Expanded(
               child: InkWell(
+                // splashColor: Colors.white,
+                // highlightColor: Colors.transparent,
                 onTap: _previousPage,
                 child: Container(
                   height: 70, // Высота кнопки
