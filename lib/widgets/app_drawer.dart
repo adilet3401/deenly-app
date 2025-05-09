@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:sabr/theme/theme.dart';
 
+import 'package:provider/provider.dart';
+
+import '../theme/theme.dart';
 import '../timeeng/asr_page.dart';
 import '../timeeng/bagymdat_page.dart';
 import '../timeeng/beshim_page.dart';
