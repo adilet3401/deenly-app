@@ -9,27 +9,6 @@ final themeData = ThemeData(
     seedColor: primaryColor,
     brightness: Brightness.dark,
   ),
+  appBarTheme: AppBarTheme(color: Color(0xff948979)),
   useMaterial3: true,
-  // textTheme: TextTheme(
-  //   titleMedium: TextStyle(
-  //     fontSize: 15,
-  //     fontWeight: FontWeight.bold,
-  //     color: Colors.red,
-  //   ),
-  //   titleSmall: TextStyle(
-  //     fontSize: 15,
-  //     fontWeight: FontWeight.bold,
-  //     color: Colors.black,
-  //   ),
-  //   titleLarge: TextStyle(
-  //     fontSize: 18,
-  //     fontWeight: FontWeight.bold,
-  //     color: Colors.red,
-  //   ),
-  //   bodySmall: TextStyle(
-  //     fontSize: 18,
-  //     fontWeight: FontWeight.bold,
-  //     color: Colors.black,
-  //   ),
-  // ),
 );

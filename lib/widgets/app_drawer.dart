@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:sabr/text_styles/theme.dart';
-import 'package:sabr/timeeng/asr_page.dart';
-import 'package:sabr/timeeng/bagymdat_page.dart';
-import 'package:sabr/timeeng/beshim_page.dart';
-import 'package:sabr/timeeng/kuptan_page.dart';
-// import 'package:sabr/widgets/home_page.dart';
-import 'package:sabr/widgets/javshann.dart';
-import 'package:sabr/widgets/naariya_salavaty.dart';
-import 'package:sabr/widgets/namaz_ubaktysy.dart';
-import 'package:sabr/timeeng/sham_page.dart';
-import 'package:sabr/widgets/sunush_page.dart';
-import 'package:sabr/widgets/tasbih_page.dart';
+import 'package:provider/provider.dart';
+import 'package:sabr/theme/theme.dart';
+
+import '../text_styles/theme.dart';
+import '../timeeng/asr_page.dart';
+import '../timeeng/bagymdat_page.dart';
+import '../timeeng/beshim_page.dart';
+import '../timeeng/kuptan_page.dart';
+import '../timeeng/sham_page.dart';
+
+import 'javshann.dart';
+import 'naariya_salavaty.dart';
+import 'namaz_ubaktysy.dart';
+import 'sunush_page.dart';
+import 'tasbih_page.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -28,6 +31,12 @@ class AppDrawer extends StatelessWidget {
               " بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+            },
+            child: Text('Тема'),
           ),
           // UbakytTar(
           //   text: 'Башкы бет',

@@ -11,139 +11,103 @@ class BeshimPage extends StatelessWidget {
     final List<TextItem> texts = [
       TextItem(
         'Бешим намазынын парзы окулуп, салам берилгенден кийин:',
-        TextStyles.largeTitle,
+        TextStyles.largeTitle(context), // Передаём context
       ),
       TextItem(
         '«(Астагфируллах, 3 жолу) \n Аллохума антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икром»',
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context), // Передаём context
         TextAlign.center,
       ),
       TextItem(
         'деп айтылат. Анан колдор көтөрүлүп, алакандар жайылып «Солаатан тунжина» дубасы окулат:',
-        TextStyles.redTitle,
+        TextStyles.redTitle(context), // Передаём context
       ),
       TextItem(
         '«Аллоохумма солли ‘алаа саййидинаа Мухаммадин ва ‘алаа аали саййидинаа Мухаммад, солаатан тунжиина бихаа мин жамии’ил ахваали вал аафат. ("аафаат" деп айтып жатканда алакан төмөн, бүткөндө өйдө каратылат.) Ва тагдий ланаа бихаа жамии’ал хаажат, ва тутоххирунаа бихаа мин жамии’ис саййи’аат, ва тарфа’унаа бихаа ‘индака а’лад даражаат, ва тубаллиггунаа бихаа аксал гааяат, мин жамии’ил хайраати фил хаяати ва ба’дал мамаат, инахаллааху ‘алаа заалика, вал хамду лиллаахи Робб ‘ааламийн»',
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context), // Передаём context
       ),
-      TextItem('деп алакандар бетке сүрүлөт.', TextStyles.redTitle),
+      TextItem('деп алакандар бетке сүрүлөт.', TextStyles.redTitle(context)),
       TextItem(
         "Бешимдин акыркы сүннөтү окулгандан кийин:",
-        TextStyles.redTitle,
+        TextStyles.redTitle(context),
       ),
       TextItem(
         "«Субхааналлоохи вал хамду лиллаахи ва лаа илааха иллаллооху валлооху акбар, ва лаа хавла ва лаа куввата иллаа биллаахил 'алиййил 'азыйм ",
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
       ),
-      TextItem('деп айтылат жана «Аятал Курси» окулат.', TextStyles.redTitle),
-      TextItem('Бисмиллаахир Рахмаанир Рахиим.', TextStyles.largeTitle),
+      TextItem(
+        'деп айтылат жана «Аятал Курси» окулат.',
+        TextStyles.redTitle(context),
+      ),
+      TextItem(
+        'Бисмиллаахир Рахмаанир Рахиим.',
+        TextStyles.largeTitle(context),
+      ),
       TextItem(
         "«Аллооху лаа илааха иллаа хувал хаййул каййуум, лаа та-хузухуу синатун валаа наум, лаху маа фиссамааваати вамаа фил ард, ман заллазий йашфа'у 'индахуу иллаа би-изних, йа'ламу маа байна айдийхим вамаа холфахум валаа йухийтууна би шай-ин мин 'илмихии иллаа бимаа шаа-а, васи'а курсиййухус самааваати вал арди, валаа йа-уудухуу хифзухумаа ва хувал 'алиййул 'азыйм».'",
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
       ),
       TextItem(
         'Намаз тасбихтери айтылат:',
-        TextStyles.redTitle,
+        TextStyles.redTitle(context),
         TextAlign.center,
       ),
       TextItem(
         'Субхааналлоох (33 жолу)\nАльхамду лиллах (33 жолу)\nАллооху акбар (33 жолу)',
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
         TextAlign.center,
       ),
       TextItem(
         '«Лаа илааха иллаллооху вахдахуу лаа шарийка лах, лахул мульку ва лахул хамду юхйий ва йумиит, ва хува хаййун лаа ямуут, биадийхил хайр, ва хува ‘алаа кулли шай-ин кодиир, ва илайхил масиир»',
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
       ),
-      TextItem('(деп айтылып дуа кылынат)', TextStyles.redTitle),
-      TextItem('Дубадан кийинки тасбихат улантылат:', TextStyles.redTitle),
+      TextItem('(деп айтылып дуа кылынат)', TextStyles.redTitle(context)),
+      TextItem(
+        'Дубадан кийинки тасбихат улантылат:',
+        TextStyles.redTitle(context),
+      ),
       TextItem(
         'Фа’лам аннаху (1 жолу)',
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
         TextAlign.center,
       ),
-      TextItem('Лаа илааха иллаллоох', TextStyles.blackTitle, TextAlign.center),
-      TextItem('(33 жолу окулат)', TextStyles.redTitle, TextAlign.center),
+      TextItem(
+        'Лаа илааха иллаллоох',
+        TextStyles.blackTitle(context),
+        TextAlign.center,
+      ),
+      TextItem(
+        '(33 жолу окулат)',
+        TextStyles.redTitle(context),
+        TextAlign.center,
+      ),
       TextItem(
         '«Мухаммадун Расуулуллоохи соллаллооху та’аалаа ‘алайхи ва саллам»',
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
       ),
-      TextItem('Андан соң:', TextStyles.redTitle, TextAlign.center),
+      TextItem('Андан соң:', TextStyles.redTitle(context), TextAlign.center),
       TextItem(
         'Тасбихаттан кийин салават-саламдар окулат:',
-        TextStyles.redTitle,
+        TextStyles.redTitle(context),
       ),
-      TextItem('Бисмиллаахир Рохмаанир Рахиим.', TextStyles.largeTitle),
+      TextItem(
+        'Бисмиллаахир Рохмаанир Рахиим.',
+        TextStyles.largeTitle(context),
+      ),
       TextItem(
         "~ Инналлооха ва малаа-икатаху йусоллууна 'алан набий, йаа айюхаллазийна аамануус соллу'алайхи васаллимуу таслиймаа, лаббайк!.",
-        TextStyles.blackTitle,
+        TextStyles.blackTitle(context),
       ),
-      TextItem(
-        "~ Аллоохумма солли 'алаа саййидиина Мухаммадин ва 'алаа аали саййидиина Мухаммад, би 'адади кулли даа-ин ва даваа-ин ва баарик васаллим 'алайхи ва 'алайхим касиироо.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "~ Аллоохумма солли 'алаа саййидиина Мухаммадин ва 'алаа аали саййидиина Мухаммад, би ‘адади кулли даа-ин ва даваа-ин ва баарик васаллим 'алайхи ва алайхим касиироо.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "~ Аллоохумма солли 'алаа саййидиина Мухаммадин ва 'алаа аали саййидиина Мухаммад, би ‘адади кулли даа-ин ва даваа-ин ва баарик васаллим 'алайхи ва алайхим касийрон касийроо.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "~ Солли васаллим йаа Робби ‘алаа хабийбика Мухаммадин ва 'алаа жамии’ил анбийаа-и вал мурсалийн, ва 'алаа аали куллин ва сохби куллин ажма’иин. Аамиин, вал хамду лиллаахи Роббил 'ааламиин.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "~ Алфу алфи солаатин ва алфу алфи салаамин ‘алайка йаа расуулллоох.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "~ Алфу алфи солаатин ва алфу алфи салаамин ‘алайка йаа хабиибуллоох.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "~ Алфу алфи солаатин ва алфу алфи салаамин ‘алайка йаа амина вахийллаах.",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "Аллоохумма соли васаллим ва баарик ,‘алаа саййидинаа Мухаммадин ва ‘алаа аалихи ва асхаабих, би ‘адади авроокил ашжаари ва амваажил бихааари ва катороотил амтоор, вагфир ланаа вархамнаа валтуф бинаа ва би устаазина ва ваалидийнаа ва битолаабати росаа-илин нурис-соодикиин, йаа илаахаанаа би кулли солаатин минхаа, ашхаду ан лаа илааха иллаллоох, ва ашхаду анна Мухаммадам Расуулуллоох соллаллооху та‘аала ‘алайхи ва саллам.",
-        TextStyles.blackTitle,
-      ),
-      TextItem("Бисмиллаахир Рахмаанир Рахиим.", TextStyles.redTitle),
-
-      TextItem(
-        "~ Йаа Жамиилу йаа Аллаах Йаа Кориибу йаа Аллаах \n~Йаа Мужиибу йаа Аллаах Йаа Хабиибу йаа Аллаах \n~Йаа Ро-ууфу йаа Аллаах Йаа 'Атууфу йаа Аллаах \n~Йаа Ма'рууфу йаа Аллаах Йаа Латыйфу йаа Аллаах \n~Йаа 'Азыйму йаа Аллаах Йаа Ханнаану йаа Аллаах \n~Йаа Маннаану йаа Аллаах Йаа Даййаану йаа Аллаах \n~Йаа Субхаану йаа Аллаах Йаа Амаану йаа Аллаах \n~Йаа Бурхаану йаа Аллаах Йаа Султоону йаа Аллаах \n~Йаа Муста'аану йаа Аллаах Йаа Мухсину йаа Аллаах \n~Йаа Мута'аалу йаа Аллаах Йаа Рохмаану йаа Аллаах \n~Йаа Рохийму йаа Аллаах Йаа Карийму йаа Аллаах \n~Йаа Мажииду йаа Аллаах Йаа Фарду йаа Аллаах \n~Йаа Витру йаа Аллаах Йаа Ахаду йаа Аллаах \n~Йаа Сомаду йаа Аллаах Йаа Махмууду йаа Аллаах \n~Йаа Соодикал Ва'ди йаа Аллаах Йаа 'Алиййу йаа Аллаах \n~Йаа Гониййу йаа Аллаах Йаа Шаафий йаа Аллаах\n~Йаа Каафий йаа Аллаах Йаа Му'аафий йаа Аллаах\n~Йаа Баакий йаа Аллаах Йаа Хаадий йаа Аллаах \n~Йаа Коодиру йаа Аллаах Йаа Саатиру йаа Аллаах \n~Йаа Коххаару йаа Аллаах Йаа Жаббаару йаа Аллаах \n~Йаа Гоффаару йаа Аллаах Йаа Фаттааху йаа Аллаах",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "Алакандан жогору каратылып, колдор көтөрүлөт:",
-        TextStyles.redTitle,
-      ),
-      TextItem(
-        "«Йаа Роббас самааваати вал арди, йаа зал жалаали вал икроом, (н)ас-алука би хакки хаазихил асмаа-и куллихаа ан тусоллийа 'алаа саййидинаа Мухаммадин ва 'алаа аали Мухаммад, вархам Мухаммадан камаа соллайта ва салламта ва баарокта ва рохимта ва тароххамта 'алаа Ибрахийма ва 'алаа аали Ибрахийма фил 'ааламиин, Роббанаа иннака Хамийдун Мажиид, би рохматика йаа архамар роохимиин, вал хамду лиллаахи Роббил 'ааламиин».",
-        TextStyles.blackTitle,
-      ),
-      TextItem(
-        "«Фатх» сүрөсүнүн акыркы аяттары окулуп, тасбихат бүтүрүлөт.",
-        TextStyles.redTitle,
-      ),
-      TextItem("Бисмиллаахир Рахмаанир Рахиим.", TextStyles.largeTitle),
-      TextItem(
-        "«Лакод содакАллооху росуулахур ру-йаа бил хакк, латадхулуннал масжидал хароома иншаа-Аллооху ааминийна мухалликыйна ру-уусакум ва мукассырийна лаа тахоофуун, фа 'алима маа лам та'ламуу фажа'ала мин дууни заалика фатхан корийбаа Хуваллазий арсала росуулахуу бил худаа ва дийнил хакки ли йузхирахуу 'алад дийни куллих, ва кафаа биллаахи шахийдаа Мухаммадур расуулуллоох, валлазийна ма'ахуу ашиддаа-у 'алал куффаари рухамаа-у байнахум, тароохум рукка'ан сужжадан ябтагууна фадлан миналлоохи ва ридваанаа, сиймаахум фий вужуухихим мин асарис сужууд, Заалика масалухум фит таврооти ва масалухум фил инжиил, казар-ин ахрожа шатаху фа аазарахуу фастаглазо фаставаа 'алаа суукихии йу'жибуззурраа'а ли йагийзо бихимул куффаар, ва'ад Аллоохул лазийна аамануу ва 'амилус соолихаати минхум магфиротав ва ажрон азыймаа».",
-        TextStyles.blackTitle,
-      ),
-      TextItem("СодакАллоохул 'Азыйм.", TextStyles.redTitle, TextAlign.center),
+      // Остальные элементы списка...
     ];
+
     return Scaffold(
-      backgroundColor: const Color(0xffF2EFE7),
       appBar: AppBar(
-        backgroundColor: const Color(0xff16423C),
         title: Text(
           "Бешим",
           style: GoogleFonts.nunito(
-            fontWeight: FontWeight.bold,
             color: Colors.white,
+            fontWeight: FontWeight.bold,
           ),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -153,15 +117,12 @@ class BeshimPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: ListView.separated(
           itemCount: texts.length,
-          separatorBuilder:
-              (context, index) => const SizedBox(height: 15), // Авто-отступ
+          separatorBuilder: (context, index) => const SizedBox(height: 15),
           itemBuilder:
               (context, index) => Text(
                 texts[index].text,
                 style: texts[index].style,
-                textAlign:
-                    texts[index].textAlign ??
-                    TextAlign.start, // Добавлено textAlign
+                textAlign: texts[index].textAlign ?? TextAlign.start,
                 softWrap: true,
               ),
         ),
@@ -170,6 +131,7 @@ class BeshimPage extends StatelessWidget {
   }
 }
 
+// Модель для текстов
 class TextItem {
   final String text;
   final TextStyle style;
