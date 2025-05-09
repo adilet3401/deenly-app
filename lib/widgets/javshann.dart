@@ -577,7 +577,7 @@ class _JavshannPageState extends State<JavshannPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Color(0xff16423C),
+        // backgroundColor: Color(0xff16423C),
         iconTheme: IconThemeData(color: Colors.white),
       ),
       backgroundColor: Color(0xffF2EFE7),
@@ -608,7 +608,7 @@ class _JavshannPageState extends State<JavshannPage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color(0xff16423C),
+        // color: Color(0xff16423C),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[

@@ -62,9 +62,9 @@ class _NaariyaSalavatState extends State<NaariyaSalavat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF2EFE7),
+      // backgroundColor: const Color(0xffF2EFE7),
       appBar: AppBar(
-        backgroundColor: const Color(0xff16423C),
+        // backgroundColor: const Color(0xff16423C),
         title: Text(
           "Наария Салаваты",
           style: GoogleFonts.nunito(
@@ -90,7 +90,7 @@ class _NaariyaSalavatState extends State<NaariyaSalavat> {
                 child: Text(
                   'Бисмиллаахир Рахмаанир Рахиим.',
                   textAlign: TextAlign.center,
-                  style: TextStyles.largeTitle,
+                  style: TextStyles.largeTitle(context),
                 ),
               ),
             ),
@@ -100,7 +100,7 @@ class _NaariyaSalavatState extends State<NaariyaSalavat> {
               child: Center(
                 child: Text(
                   "«Аллахумма салли салятан камилятан васаллим саляман тамман ‘аля сайидина Мухамадини-ллязи танхалю бихиль-‘укаду ватанфариджу бихиль-курабу ватукза бихиль-хаваиджу ватуналю бихи-рагаибу вахуснуль-хаватим. Ваюстаскаль-гамаму биваджхихиль-кярими ва‘аля алихи ва сахбихи фи кули лямхатин ванафасин би'адади кули ма‘люммин ляк».",
-                  style: TextStyles.salavatTitle,
+                  style: TextStyles.salavatTitle(context),
                   textAlign: TextAlign.center,
                 ),
               ),
