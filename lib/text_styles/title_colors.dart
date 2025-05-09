@@ -10,17 +10,17 @@ class TextStyles {
       );
 
   static TextStyle redTitle(BuildContext context) =>
-      Theme.of(context).textTheme.bodyLarge!.copyWith(
+      Theme.of(context).textTheme.bodyMedium!.copyWith(
         fontSize: 16,
-        color: Colors.red,
+        // color: Colors.orange,
         fontWeight: FontWeight.bold,
         fontFamily: GoogleFonts.nunito().fontFamily,
       );
 
   static TextStyle largeTitle(BuildContext context) =>
-      Theme.of(context).textTheme.headlineMedium!.copyWith(
+      Theme.of(context).textTheme.bodyMedium!.copyWith(
         fontSize: 20,
-        color: Colors.red,
+        // color: Colors.orange,
         fontWeight: FontWeight.bold,
         fontFamily: GoogleFonts.nunito().fontFamily,
       );

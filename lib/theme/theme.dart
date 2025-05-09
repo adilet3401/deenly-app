@@ -22,8 +22,9 @@ class ThemeProvider with ChangeNotifier {
     scaffoldBackgroundColor: Colors.white, // Цвет фона Scaffold
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: Colors.black), // Цвет текста
+      bodyMedium: TextStyle(color: Colors.red), // Цвет текста
     ),
-    drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+    drawerTheme: DrawerThemeData(backgroundColor: Color(0xff16423C)),
     dividerTheme: DividerThemeData(color: Colors.grey.shade400),
   );
 
@@ -38,12 +39,21 @@ class ThemeProvider with ChangeNotifier {
 
     scaffoldBackgroundColor: Color(0xff1f2023), // Цвет фона Scaffold
     textTheme: TextTheme(
-      bodyLarge: TextStyle(color: Colors.white), // Цвет текста
+      bodyLarge: TextStyle(color: Colors.grey.shade500), // Цвет текста
+      bodyMedium: TextStyle(color: Colors.orange), // Цвет текста
     ),
     drawerTheme: DrawerThemeData(
-      backgroundColor: Color(0xff191b1e),
+      backgroundColor: Color(0xff1A2525),
       surfaceTintColor: Colors.red,
     ),
     dividerTheme: DividerThemeData(color: Colors.grey.shade200),
   );
+}
+
+extension CustomColors on ThemeData {
+  Color get drawerWindowBackground =>
+      brightness == Brightness.dark ? Color(0xff2C2C2E) : Color(0xffF5F5F5);
+
+  Color get drawerWindowText =>
+      brightness == Brightness.dark ? Colors.white : Colors.black;
 }

@@ -21,11 +21,18 @@ class UbakytTar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Определяем цвета в зависимости от темы
+    final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
+    final activeColor = isDarkTheme ? Colors.green : Colors.green;
+    final inactiveColor = isDarkTheme ? Colors.white : Colors.black;
+    final backgroundColor =
+        isActive ? (isDarkTheme ? Color(0xff2E3B3B) : Colors.grey[200]) : null;
+
     return ListTile(
       title: Text(
         text,
         style: GoogleFonts.nunito(
-          color: isActive ? Colors.green : Colors.black,
+          color: isActive ? activeColor : inactiveColor,
           fontWeight: isActive ? FontWeight.bold : FontWeight.w700,
           fontSize: 18,
         ),
@@ -35,21 +42,18 @@ class UbakytTar extends StatelessWidget {
               ? Icon(
                 icon,
                 size: iconSize,
-                color:
-                    isActive
-                        ? const Color.fromARGB(255, 67, 155, 69)
-                        : Colors.black,
+                color: isActive ? activeColor : inactiveColor,
               )
               : image != null
               ? ColorFiltered(
                 colorFilter: ColorFilter.mode(
-                  isActive ? Color.fromARGB(255, 67, 155, 69) : Colors.black,
+                  isActive ? activeColor : inactiveColor,
                   BlendMode.srcIn,
                 ),
                 child: image!,
               )
               : null,
-      tileColor: isActive ? Colors.grey[200] : null,
+      tileColor: backgroundColor,
       onTap: onTap,
     );
   }
