@@ -18,7 +18,7 @@ class SunushPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF2EFE7),
+      // backgroundColor: const Color(0xffF2EFE7),
       appBar: AppBar(
         title: Text(
           'Сунуштар',
@@ -28,7 +28,7 @@ class SunushPage extends StatelessWidget {
           ),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: const Color(0xff16423C),
+        // backgroundColor: const Color(0xff16423C),
       ),
       body: Center(
         child: Padding(

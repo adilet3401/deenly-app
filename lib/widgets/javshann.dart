@@ -123,7 +123,7 @@ class _JavshannPageState extends State<JavshannPage> {
 2. Йаа Каашифал балаайа
 3. Йаа Мунтахар-рожаайа
 4. Йаа Мужзилал ъатоойа
-5. Йаа Ваасиъал хадаайа
+5. Йаа Ваисиъал хадаайа
 6. Йаа Роозикол бараайа
 7. Йаа Коодийал манаайа
 8. Йаа Саамиъаш-шакаайа
@@ -222,8 +222,8 @@ class _JavshannPageState extends State<JavshannPage> {
 1. Йаа Далиилал-мутахаййириин
 2. Йаа Гыйаасал-мустагиисиин
 3. Йаа Сориихол-мустасрихиин
-4. Йаа Жаарал-мустажирииин
-5. Йаа Малжа ал-йаасииин
+4. Йаа Жаарал-мустажириин
+5. Йаа Малжа ал-йаасиин
 6. Йаа Гоофирал-музнибиин
 7. Йаа Амаанал-хооифиин
 8. Йаа Раахимал-масаакиин
@@ -332,7 +332,7 @@ class _JavshannPageState extends State<JavshannPage> {
 4.Йаа Ман лаа йахтику-сситр
 5.Йаа Ъазимал-ъафв
 6.Йаа Хасанат-тажаавуз
-7.Йаа Ваасиъал-магфира
+7.Йаа Ваисиъал-магфира
 8.Йаа Бааситол-йадайни бир-рахма
 9.Йаа Соохиба кулли нажваа
 10.Йаа Мунтахаа кулли шакваа
@@ -354,10 +354,10 @@ class _JavshannPageState extends State<JavshannPage> {
     '''
 1.Йаа Ахкамал-хаакимиин
 2.Йаа Адъалал-ъаадилиин
-3.Йаа Асдакос-соодикиин
+3.Йаа Асдакос-соодикин
 4.Йаа Азхараз-зоохириин
 5.Йаа Атхарот-тоохириин
-6.Йаа Ахсанал-хооликиин
+6.Йаа Ахсанал-хооликин
 7.Йаа Асраъал-хаасибиин
 8.Йаа Асмаъас-саамиъиин
 9.Йаа Акрамал-акрамиин
@@ -533,7 +533,7 @@ class _JavshannPageState extends State<JavshannPage> {
 3. Йаа Ваафии
 4. Йаа Муъаафии
 5. Йаа Ъаалии
-6. Йаа Дааъии
+6. Йаа Даъии
 7. Йаа Роодии
 8. Йаа Коодии
 9. Йаа Баакыйу
@@ -608,13 +608,17 @@ class _JavshannPageState extends State<JavshannPage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        // color: Color(0xff16423C),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white, size: 40),
-              onPressed: _previousPage,
+            InkWell(
+              onTap: _previousPage,
+              child: Container(
+                padding: const EdgeInsets.all(
+                  16,
+                ), // Увеличиваем область нажатия
+                child: Icon(Icons.arrow_back, color: Colors.white, size: 40),
+              ),
             ),
             Text(
               '$_pageNumber / ${_texts.length}',
@@ -624,9 +628,14 @@ class _JavshannPageState extends State<JavshannPage> {
                 fontSize: 15,
               ),
             ),
-            IconButton(
-              icon: Icon(Icons.arrow_forward, color: Colors.white, size: 40),
-              onPressed: _nextPage,
+            InkWell(
+              onTap: _nextPage,
+              child: Container(
+                padding: const EdgeInsets.all(
+                  16,
+                ), // Увеличиваем область нажатия
+                child: Icon(Icons.arrow_forward, color: Colors.white, size: 40),
+              ),
             ),
           ],
         ),
