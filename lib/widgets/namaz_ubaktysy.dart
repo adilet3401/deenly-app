@@ -27,6 +27,7 @@ class UbakytTar extends StatelessWidget {
     final inactiveColor = isDarkTheme ? Colors.grey.shade500 : Colors.black;
     final backgroundColor =
         isActive
+            // ignore: deprecated_member_use
             ? (isDarkTheme ? Colors.orange.withOpacity(0.1) : Colors.grey[100])
             : null;
 

@@ -8,6 +8,7 @@ class JavshannPage extends StatefulWidget {
   const JavshannPage({super.key, this.textStyle});
 
   @override
+  // ignore: library_private_types_in_public_api
   _JavshannPageState createState() => _JavshannPageState();
 }
 
@@ -613,6 +614,7 @@ class _JavshannPageState extends State<JavshannPage> {
             Expanded(
               child: InkWell(
                 onTap: _previousPage,
+                // ignore: deprecated_member_use
                 splashColor: Colors.white.withOpacity(
                   0.3,
                 ), // Слабый эффект всплеска
@@ -631,6 +633,7 @@ class _JavshannPageState extends State<JavshannPage> {
             Expanded(
               child: InkWell(
                 onTap: _nextPage,
+                // ignore: deprecated_member_use
                 splashColor: Colors.white.withOpacity(
                   0.3,
                 ), // Слабый эффект всплеска
