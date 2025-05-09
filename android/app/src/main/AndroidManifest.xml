@@ -1,4 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Разрешение на проверку активностей -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+            <data android:scheme="tel"/>
+        </intent>
+    </queries>
+
     <application
         android:label="sabr"
         android:name="${applicationName}"
@@ -43,18 +55,5 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        
-        <!-- Разрешение на проверку активностей -->
-        <queries>
-            <intent>
-                <action android:name="android.intent.action.VIEW"/>
-                <data android:scheme="https"/>
-            </intent>
-            <intent>
-                <action android:name="android.intent.action.DIAL"/>
-                <data android:scheme="tel"/>
-            </intent>
-        </queries>
-
     </application>
 </manifest>
