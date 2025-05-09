@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sabr/text_styles/title_theme.dart';
 import 'package:sabr/widgets/app_drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -45,19 +46,13 @@ class SunushPage extends StatelessWidget {
               Text(
                 "Ассалому алейкум!",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.nunito(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyles.sunushTitle(context),
               ),
               const SizedBox(height: 10),
               Text(
                 "Бул тиркемеде каталарды тапсаныз, же сунуштар болсо, бизге жазыныз:",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.nunito(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStyles.sunushTitle2(context),
               ),
               const SizedBox(height: 20),
               ListTile(

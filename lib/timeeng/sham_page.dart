@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sabr/text_styles/title_colors.dart';
+import 'package:sabr/text_styles/title_theme.dart';
 import 'package:sabr/widgets/app_drawer.dart';
 
 class ShamPage extends StatelessWidget {

@@ -23,8 +23,9 @@ class ThemeProvider with ChangeNotifier {
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: Colors.black), // Цвет текста
       bodyMedium: TextStyle(color: Colors.red), // Цвет текста
+      bodySmall: TextStyle(color: Colors.black), // Цвет текста
     ),
-    drawerTheme: DrawerThemeData(backgroundColor: Color(0xff16423C)),
+    drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
     dividerTheme: DividerThemeData(color: Colors.grey.shade400),
   );
 
@@ -41,19 +42,12 @@ class ThemeProvider with ChangeNotifier {
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: Colors.grey.shade500), // Цвет текста
       bodyMedium: TextStyle(color: Colors.orange), // Цвет текста
+      bodySmall: TextStyle(color: Colors.grey.shade300), // Цвет текста
     ),
     drawerTheme: DrawerThemeData(
-      backgroundColor: Color(0xff1A2525),
-      surfaceTintColor: Colors.red,
+      backgroundColor: Color(0xff1f2023),
+      // surfaceTintColor: Colors.red,
     ),
     dividerTheme: DividerThemeData(color: Colors.grey.shade200),
   );
-}
-
-extension CustomColors on ThemeData {
-  Color get drawerWindowBackground =>
-      brightness == Brightness.dark ? Color(0xff2C2C2E) : Color(0xffF5F5F5);
-
-  Color get drawerWindowText =>
-      brightness == Brightness.dark ? Colors.white : Colors.black;
 }

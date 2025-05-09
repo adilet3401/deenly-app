@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sabr/theme/theme.dart';
 
-// import '../text_styles/theme.dart';
 import '../timeeng/asr_page.dart';
 import '../timeeng/bagymdat_page.dart';
 import '../timeeng/beshim_page.dart';
@@ -20,16 +19,30 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final theme = Theme.of(context);
+
     return Drawer(
-      // backgroundColor: Colors.white,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(color: Color(0xff16423C)),
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color:
+                  Theme.of(context).brightness == Brightness.dark
+                      ? Color(0xff191b1e)
+                      : Color(0xff16423C), // Фон заголовка
+            ),
             child: Text(
-              " بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+              style: TextStyle(
+                color:
+                    Theme.of(context).brightness == Brightness.dark
+                        ? Colors.orange
+                        : Colors.white, // Цвет текста заголовка
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
           ElevatedButton(
@@ -225,3 +238,11 @@ class AppDrawer extends StatelessWidget {
     );
   }
 }
+
+// extension CustomColors on ThemeData {
+//   Color get drawerWindowBackground =>
+//       brightness == Brightness.dark ? Color(0xff2C2C2E) : Color(0xffF5F5F5);
+
+//   Color get drawerWindowText =>
+//       brightness == Brightness.dark ? Colors.white : Colors.black;
+// }

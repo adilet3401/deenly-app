@@ -23,10 +23,12 @@ class UbakytTar extends StatelessWidget {
   Widget build(BuildContext context) {
     // Определяем цвета в зависимости от темы
     final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
-    final activeColor = isDarkTheme ? Colors.green : Colors.green;
-    final inactiveColor = isDarkTheme ? Colors.white : Colors.black;
+    final activeColor = isDarkTheme ? Colors.orange : Colors.green;
+    final inactiveColor = isDarkTheme ? Colors.grey.shade400 : Colors.black;
     final backgroundColor =
-        isActive ? (isDarkTheme ? Color(0xff2E3B3B) : Colors.grey[200]) : null;
+        isActive
+            ? (isDarkTheme ? Colors.orange.withOpacity(0.1) : Colors.grey[100])
+            : null;
 
     return ListTile(
       title: Text(

@@ -38,6 +38,20 @@ class TextStyles {
         fontWeight: FontWeight.bold,
         fontFamily: GoogleFonts.nunito().fontFamily,
       );
+  static TextStyle sunushTitle(BuildContext context) =>
+      Theme.of(context).textTheme.bodySmall!.copyWith(
+        // color: Colors.black,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        fontFamily: GoogleFonts.nunito().fontFamily,
+      );
+  static TextStyle sunushTitle2(BuildContext context) =>
+      Theme.of(context).textTheme.bodySmall!.copyWith(
+        // color: Colors.black,
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        fontFamily: GoogleFonts.nunito().fontFamily,
+      );
 }
 // import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
