@@ -62,8 +62,7 @@ class _JavshannPageState extends State<JavshannPage> {
  
  
  Субхаанака йаа лаа илааһа иллаа антал амаанал
-амаана холлиснаа минан-наар
- ''',
+амаана холлиснаа минан-наар ''',
     '''1. Йаа Хойрол Гоофириин
 2. Йаа Хойрон-Наасыриин
 3. Йаа Хойрол Хаакимиин
@@ -613,9 +612,14 @@ class _JavshannPageState extends State<JavshannPage> {
             // Левая половина для перехода на предыдущую страницу
             Expanded(
               child: InkWell(
-                // splashColor: Colors.white,
-                // highlightColor: Colors.transparent,
                 onTap: _previousPage,
+                splashColor: Colors.white.withOpacity(
+                  0.3,
+                ), // Слабый эффект всплеска
+                highlightColor: Colors.transparent, // Убираем выделение
+                borderRadius: BorderRadius.circular(
+                  20,
+                ), // Закругляем края эффекта
                 child: Container(
                   height: 70, // Высота кнопки
                   alignment: Alignment.center,
@@ -627,6 +631,13 @@ class _JavshannPageState extends State<JavshannPage> {
             Expanded(
               child: InkWell(
                 onTap: _nextPage,
+                splashColor: Colors.white.withOpacity(
+                  0.3,
+                ), // Слабый эффект всплеска
+                highlightColor: Colors.transparent, // Убираем выделение
+                borderRadius: BorderRadius.circular(
+                  20,
+                ), // Закругляем края эффекта
                 child: Container(
                   height: 70, // Высота кнопки
                   alignment: Alignment.center,

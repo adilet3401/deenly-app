@@ -31,6 +31,13 @@ class TextStyles {
         fontWeight: FontWeight.bold,
         fontFamily: GoogleFonts.nunito().fontFamily,
       );
+  static TextStyle arabicTitle(BuildContext context) =>
+      Theme.of(context).textTheme.bodyLarge!.copyWith(
+        // color: Colors.black,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        fontFamily: GoogleFonts.nunito().fontFamily,
+      );
 }
 // import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';

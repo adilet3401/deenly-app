@@ -23,6 +23,8 @@ class ThemeProvider with ChangeNotifier {
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: Colors.black), // Цвет текста
     ),
+    drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
+    dividerTheme: DividerThemeData(color: Colors.grey.shade400),
   );
 
   ThemeData get darkTheme => ThemeData(
@@ -38,5 +40,10 @@ class ThemeProvider with ChangeNotifier {
     textTheme: TextTheme(
       bodyLarge: TextStyle(color: Colors.white), // Цвет текста
     ),
+    drawerTheme: DrawerThemeData(
+      backgroundColor: Color(0xff191b1e),
+      surfaceTintColor: Colors.red,
+    ),
+    dividerTheme: DividerThemeData(color: Colors.grey.shade200),
   );
 }

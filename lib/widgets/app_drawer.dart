@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sabr/theme/theme.dart';
 
-import '../text_styles/theme.dart';
+// import '../text_styles/theme.dart';
 import '../timeeng/asr_page.dart';
 import '../timeeng/bagymdat_page.dart';
 import '../timeeng/beshim_page.dart';
@@ -21,7 +21,7 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -38,23 +38,9 @@ class AppDrawer extends StatelessWidget {
             },
             child: Text('Тема'),
           ),
-          // UbakytTar(
-          //   text: 'Башкы бет',
-          //   icon: Icons.home_filled,
-          //   iconSize: 30,
-          //   isActive: ModalRoute.of(context)?.settings.name == '/homepage',
-          //   onTap: () {
-          //     Navigator.pushReplacement(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => HomePage(),
-          //         settings: const RouteSettings(name: '/homepage'),
-          //       ),
-          //     );
-          //   },
-          // ),
+
           Divider(
-            color: themeData.dividerTheme.color, // Нежный серый цвет
+            // color: themeData.dividerTheme.color, // Нежный серый цвет
             thickness: 1, // Толщина линии
             indent: 17, // Отступ слева
             endIndent: 17, // Отступ справа
@@ -147,7 +133,7 @@ class AppDrawer extends StatelessWidget {
             isActive: ModalRoute.of(context)?.settings.name == '/kuptan',
           ),
           Divider(
-            color: Colors.grey.shade400, // Нежный серый цвет
+            // color: Colors.grey.shade400, // Нежный серый цвет
             thickness: 1, // Толщина линии
             indent: 17, // Отступ слева
             endIndent: 17, // Отступ справа
