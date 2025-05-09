@@ -45,11 +45,35 @@ class AppDrawer extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
+          SwitchListTile(
+            title: Text(
+              'Тёмный режим',
+              style: TextStyle(
+                color:
+                    Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            secondary: Icon(
+              Icons.dark_mode,
+              color:
+                  Theme.of(context).brightness == Brightness.dark
+                      ? Colors.orange
+                      : Colors.black,
+            ),
+            value: Theme.of(context).brightness == Brightness.dark,
+            onChanged: (bool value) {
               Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
             },
-            child: Text('Тема'),
+            activeColor:
+                Colors.orange, // Цвет переключателя в активном состоянии
+            inactiveThumbColor:
+                Colors.grey, // Цвет переключателя в неактивном состоянии
+            inactiveTrackColor:
+                Colors.grey.shade400, // Цвет трека в неактивном состоянии
           ),
 
           Divider(
