@@ -609,32 +609,31 @@ class _JavshannPageState extends State<JavshannPage> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            InkWell(
-              onTap: _previousPage,
-              child: Container(
-                padding: const EdgeInsets.all(
-                  16,
-                ), // Увеличиваем область нажатия
-                child: Icon(Icons.arrow_back, color: Colors.white, size: 40),
+            // Левая половина для перехода на предыдущую страницу
+            Expanded(
+              child: InkWell(
+                onTap: _previousPage,
+                child: Container(
+                  height: 70, // Высота кнопки
+                  alignment: Alignment.center,
+                  child: Icon(Icons.arrow_back, color: Colors.white, size: 40),
+                ),
               ),
             ),
-            Text(
-              '$_pageNumber / ${_texts.length}',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-              ),
-            ),
-            InkWell(
-              onTap: _nextPage,
-              child: Container(
-                padding: const EdgeInsets.all(
-                  16,
-                ), // Увеличиваем область нажатия
-                child: Icon(Icons.arrow_forward, color: Colors.white, size: 40),
+            // Правая половина для перехода на следующую страницу
+            Expanded(
+              child: InkWell(
+                onTap: _nextPage,
+                child: Container(
+                  height: 70, // Высота кнопки
+                  alignment: Alignment.center,
+                  child: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                ),
               ),
             ),
           ],
