@@ -24,7 +24,7 @@ class UbakytTar extends StatelessWidget {
     // Определяем цвета в зависимости от темы
     final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
     final activeColor = isDarkTheme ? Colors.orange : Colors.green;
-    final inactiveColor = isDarkTheme ? Colors.grey.shade400 : Colors.black;
+    final inactiveColor = isDarkTheme ? Colors.grey.shade500 : Colors.black;
     final backgroundColor =
         isActive
             ? (isDarkTheme ? Colors.orange.withOpacity(0.1) : Colors.grey[100])
