@@ -263,11 +263,3 @@ class AppDrawer extends StatelessWidget {
     );
   }
 }
-
-// extension CustomColors on ThemeData {
-//   Color get drawerWindowBackground =>
-//       brightness == Brightness.dark ? Color(0xff2C2C2E) : Color(0xffF5F5F5);
-
-//   Color get drawerWindowText =>
-//       brightness == Brightness.dark ? Colors.white : Colors.black;
-// }
