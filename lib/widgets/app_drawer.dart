@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 
@@ -49,13 +50,9 @@ class AppDrawer extends StatelessWidget {
           SwitchListTile(
             title: Text(
               'Тёмный режим',
-              style: TextStyle(
-                color:
-                    Theme.of(context).brightness == Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+              style: GoogleFonts.nunito(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
               ),
             ),
             secondary: Icon(

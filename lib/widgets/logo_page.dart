@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-      duration: const Duration(milliseconds: 70), // Длительность анимации
+      duration: const Duration(milliseconds: 40), // Длительность анимации
       vsync: this,
     );
     _fadeAnimation = Tween<double>(begin: 1.0, end: 0.0).animate(
