@@ -48,8 +48,7 @@ class _JavshannPageState extends State<JavshannPage> {
 10. Йаа Кариим
 
 Субхаанака йаа лаа илааһа иллаа антал амаанал
-амаана холлиснаа минан-наар
-''',
+амаана холлиснаа минан-наар ''',
     '''1. Йаа Саййидас-саадаат
 2. Йаа Мужиибад-даъаваат
 3. Йаа Валиййал-хасанаат
@@ -347,8 +346,8 @@ class _JavshannPageState extends State<JavshannPage> {
 6.Йаа Залкарооматиз-зоохироh
 7.Йаа Зас-сыфатил ъаалийаh
 8.Йаа Зал ъиззатид-дааимаh
-9.Йаа Залкувватил матиинаh
-10.Йаа Залминнатис-саабигоh
+9. Йаа Залкувватил матиинаh
+10. Йаа Залминнатис-саабигоh
 
 Субхаанака йаа лаа илааhа иллаа антал амаанал амаана холлиснаа минан-наар''',
     '''
@@ -610,39 +609,62 @@ class _JavshannPageState extends State<JavshannPage> {
       bottomNavigationBar: BottomAppBar(
         child: Row(
           children: <Widget>[
-            // Левая половина для перехода на предыдущую страницу
+            // Кнопка "назад"
             Expanded(
               child: InkWell(
                 onTap: _previousPage,
                 // ignore: deprecated_member_use
-                splashColor: Colors.white.withOpacity(
-                  0.3,
-                ), // Слабый эффект всплеска
-                highlightColor: Colors.transparent, // Убираем выделение
-                borderRadius: BorderRadius.circular(
-                  20,
-                ), // Закругляем края эффекта
+                splashColor: Colors.white.withOpacity(0.3),
+                highlightColor: Colors.transparent,
+                borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  height: 70, // Высота кнопки
+                  height: 70,
                   alignment: Alignment.center,
                   child: Icon(Icons.arrow_back, color: Colors.white, size: 40),
                 ),
               ),
             ),
-            // Правая половина для перехода на следующую страницу
+            // Кнопка выбора страницы
+            SizedBox(
+              width: 70,
+              height: 70,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(20),
+                // ignore: deprecated_member_use
+                splashColor: Colors.white.withOpacity(0.3),
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  final selected = await showDialog<int>(
+                    context: context,
+                    builder:
+                        (context) => _PagePickerDialog(
+                          pageCount: _texts.length,
+                          currentPage: _pageNumber,
+                        ),
+                  );
+                  if (selected != null && selected != _pageNumber) {
+                    setState(() {
+                      _pageNumber = selected;
+                      _appBarTitle = '$_pageNumber - баб';
+                      _text = _texts[_pageNumber - 1];
+                    });
+                  }
+                },
+                child: Center(
+                  child: Icon(Icons.menu, color: Colors.white, size: 32),
+                ),
+              ),
+            ),
+            // Кнопка "вперёд"
             Expanded(
               child: InkWell(
                 onTap: _nextPage,
                 // ignore: deprecated_member_use
-                splashColor: Colors.white.withOpacity(
-                  0.3,
-                ), // Слабый эффект всплеска
-                highlightColor: Colors.transparent, // Убираем выделение
-                borderRadius: BorderRadius.circular(
-                  20,
-                ), // Закругляем края эффекта
+                splashColor: Colors.white.withOpacity(0.3),
+                highlightColor: Colors.transparent,
+                borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  height: 70, // Высота кнопки
+                  height: 70,
                   alignment: Alignment.center,
                   child: Icon(
                     Icons.arrow_forward,
@@ -678,5 +700,68 @@ class _JavshannPageState extends State<JavshannPage> {
       }
     }
     return spans;
+  }
+}
+
+class _PagePickerDialog extends StatelessWidget {
+  final int pageCount;
+  final int currentPage;
+
+  const _PagePickerDialog({required this.pageCount, required this.currentPage});
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black;
+
+    return AlertDialog(
+      backgroundColor: isDark ? const Color(0xFF232228) : null,
+      title: Text(
+        'Выберите страницу',
+        style: GoogleFonts.nunito(
+          color: textColor,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      content: SingleChildScrollView(
+        child: ListBody(
+          children: List.generate(pageCount, (index) {
+            final pageNumber = index + 1;
+            return RadioListTile<int>(
+              title: Text(
+                '$pageNumber - баб',
+                style: GoogleFonts.nunito(
+                  color: textColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              value: pageNumber,
+              groupValue: currentPage,
+              activeColor:
+                  isDark
+                      ? Colors.orange
+                      : Color(0xff16423C),
+              onChanged: (value) {
+                Navigator.of(context).pop(value);
+              },
+            );
+          }),
+        ),
+      ),
+      actions: <Widget>[
+        TextButton(
+          child: Text(
+            'Отмена',
+            style: GoogleFonts.nunito(
+              color: textColor,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
   }
 }
