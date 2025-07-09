@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sabr/text_styles/title_theme.dart';
 import 'package:sabr/widgets/app_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vibration/vibration.dart';
@@ -86,6 +87,10 @@ class TasbihPageState extends State<TasbihPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final containerColor = isDark ? Colors.grey[900] : const Color(0xff16423C);
+    final textColor = isDark ? Colors.black : Colors.white; // <--- добавьте это
+
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
@@ -100,88 +105,140 @@ class TasbihPageState extends State<TasbihPage> {
         ),
       ),
       drawer: AppDrawer(),
-      body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            CustomPaint(size: const Size(350, 450), painter: TasbihPainter()),
-            Positioned(
-              top: 70,
-              child: Container(
-                width: 150,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Center(
-                  child: Text(
-                    _counter.toString().padLeft(3, '0'),
-                    style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontFamily: 'Digital',
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 100),
+            child: Column(
+              children: [
+                Container(
+                  width: 320,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: containerColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Чоң баскычты басканда, эсепке бирөө кошулат',
+                      style: TextStyless.salavatTitle.copyWith(
+                        fontSize: 15,
+                        color: textColor, // <--- вот тут
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
-              ),
+                SizedBox(height: 17),
+                Container(
+                  width: 350,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: containerColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Кичинекей баскычты басканда, эсептегич баштапкы абалга келтирилет',
+                      style: TextStyless.salavatTitle.copyWith(
+                        fontSize: 15,
+                        color: textColor, // <--- и тут
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Positioned(
-              bottom: 100,
-              child: Material(
-                color: Colors.transparent, // чтобы не было лишнего цвета
-                shape: const CircleBorder(),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(45),
-                  // ignore: deprecated_member_use
-                  splashColor: Colors.grey.withOpacity(0.2),
-                  onTap: () async {
-                    await _incrementCounter();
-                    if (await Vibration.hasVibrator()) {
-                      Vibration.vibrate(duration: 40); // короткая вибрация
-                    }
-                  },
+          ),
+          Center(
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                CustomPaint(
+                  size: const Size(350, 450),
+                  painter: TasbihPainter(),
+                ),
+                Positioned(
+                  top: 70,
                   child: Container(
-                    width: 90,
-                    height: 90,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
+                    width: 150,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Center(
+                      child: Text(
+                        _counter.toString().padLeft(3, '0'),
+                        style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontFamily: 'Digital',
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            Positioned(
-              bottom: 190,
-              right: 50,
-              child: Material(
-                color: Colors.transparent,
-                shape: const CircleBorder(),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(25),
-                  // ignore: deprecated_member_use
-                  splashColor: Colors.grey.withOpacity(0.2),
-                  onTap: () async {
-                    await _resetCounter();
-                    if (await Vibration.hasVibrator()) {
-                      Vibration.vibrate(duration: 40); // короткая вибрация
-                    }
-                  },
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
+                Positioned(
+                  bottom: 100,
+                  child: Material(
+                    color: Colors.transparent, // чтобы не было лишнего цвета
+                    shape: const CircleBorder(),
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(45),
+                      // ignore: deprecated_member_use
+                      splashColor: Colors.grey.withOpacity(0.2),
+                      onTap: () async {
+                        await _incrementCounter();
+                        if (await Vibration.hasVibrator()) {
+                          Vibration.vibrate(duration: 40); // короткая вибрация
+                        }
+                      },
+                      child: Container(
+                        width: 90,
+                        height: 90,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
+                Positioned(
+                  bottom: 190,
+                  right: 50,
+                  child: Material(
+                    color: Colors.transparent,
+                    shape: const CircleBorder(),
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(25),
+                      // ignore: deprecated_member_use
+                      splashColor: Colors.grey.withOpacity(0.2),
+                      onTap: () async {
+                        await _resetCounter();
+                        if (await Vibration.hasVibrator()) {
+                          Vibration.vibrate(duration: 40); // короткая вибрация
+                        }
+                      },
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
