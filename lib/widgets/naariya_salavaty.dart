@@ -106,6 +106,19 @@ class _NaariyaSalavatState extends State<NaariyaSalavat> {
                 ),
               ),
             ),
+            SizedBox(height: 10),
+            Padding(
+              padding: EdgeInsets.only(top: 5, right: 15, left: 15),
+              child: Center(
+                child: Text(
+                  "(Натыйжаны калыбына келтирүү үчүн басып, кармап туруңуз)",
+                  style: TextStyles.salavatTitle(
+                    context,
+                  ).copyWith(color: Colors.grey, fontSize: 15),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
             Expanded(
               child: Center(
                 child: Text(

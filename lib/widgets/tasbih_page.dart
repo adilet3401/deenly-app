@@ -129,14 +129,26 @@ class TasbihPageState extends State<TasbihPage> {
             ),
             Positioned(
               bottom: 100,
-              child: GestureDetector(
-                onTap: _incrementCounter,
-                child: Container(
-                  width: 90,
-                  height: 90,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
+              child: Material(
+                color: Colors.transparent, // чтобы не было лишнего цвета
+                shape: const CircleBorder(),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(45),
+                  // ignore: deprecated_member_use
+                  splashColor: Colors.grey.withOpacity(0.2),
+                  onTap: () async {
+                    await _incrementCounter();
+                    if (await Vibration.hasVibrator()) {
+                      Vibration.vibrate(duration: 40); // короткая вибрация
+                    }
+                  },
+                  child: Container(
+                    width: 90,
+                    height: 90,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -144,14 +156,26 @@ class TasbihPageState extends State<TasbihPage> {
             Positioned(
               bottom: 190,
               right: 50,
-              child: GestureDetector(
-                onTap: _resetCounter,
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
+              child: Material(
+                color: Colors.transparent,
+                shape: const CircleBorder(),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(25),
+                  // ignore: deprecated_member_use
+                  splashColor: Colors.grey.withOpacity(0.2),
+                  onTap: () async {
+                    await _resetCounter();
+                    if (await Vibration.hasVibrator()) {
+                      Vibration.vibrate(duration: 40); // короткая вибрация
+                    }
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
