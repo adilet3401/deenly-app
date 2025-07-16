@@ -89,7 +89,7 @@ class TasbihPageState extends State<TasbihPage> {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final containerColor = isDark ? Colors.grey[900] : const Color(0xff16423C);
-    final textColor = isDark ? Colors.black : Colors.white; // <--- добавьте это
+    // final textColor = isDark ? Colors.black : Colors.white; // <--- добавьте это
 
     return Scaffold(
       backgroundColor: Colors.grey,
@@ -124,7 +124,7 @@ class TasbihPageState extends State<TasbihPage> {
                       'Чоң баскычты басканда, эсепке бирөө кошулат',
                       style: TextStyless.salavatTitle.copyWith(
                         fontSize: 15,
-                        color: textColor, // <--- вот тут
+                        color: Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -143,7 +143,7 @@ class TasbihPageState extends State<TasbihPage> {
                       'Кичинекей баскычты басканда, эсептегич баштапкы абалга келтирилет',
                       style: TextStyless.salavatTitle.copyWith(
                         fontSize: 15,
-                        color: textColor, // <--- и тут
+                        color: Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
