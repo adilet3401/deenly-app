@@ -717,7 +717,7 @@ class _PagePickerDialog extends StatelessWidget {
     return AlertDialog(
       backgroundColor: isDark ? const Color(0xFF232228) : null,
       title: Text(
-        'Выберите страницу',
+        'Баракты тандоо',
         style: GoogleFonts.nunito(
           color: textColor,
           fontWeight: FontWeight.bold,
@@ -737,10 +737,7 @@ class _PagePickerDialog extends StatelessWidget {
               ),
               value: pageNumber,
               groupValue: currentPage,
-              activeColor:
-                  isDark
-                      ? Colors.orange
-                      : Color(0xff16423C),
+              activeColor: isDark ? Colors.orange : Color(0xff16423C),
               onChanged: (value) {
                 Navigator.of(context).pop(value);
               },
@@ -749,17 +746,20 @@ class _PagePickerDialog extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        TextButton(
-          child: Text(
-            'Отмена',
-            style: GoogleFonts.nunito(
-              color: textColor,
-              fontWeight: FontWeight.w600,
+        InkWell(
+          borderRadius: BorderRadius.circular(30),
+          onTap: () => Navigator.of(context).pop(),
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            child: Text(
+              'Жокко чыгаруу',
+              style: GoogleFonts.nunito(
+                color: textColor,
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
         ),
       ],
     );

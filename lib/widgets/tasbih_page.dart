@@ -37,35 +37,61 @@ class TasbihPageState extends State<TasbihPage> {
   }
 
   Future<void> _resetCounter() async {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final alertColor = isDark ? Colors.grey[900] : const Color(0xff16423C);
     bool? confirmReset = await showDialog(
       // barrierColor: Colors.red,
       barrierDismissible: true,
       context: context,
       builder:
           (context) => AlertDialog(
-            backgroundColor: const Color(0xff313131),
-            title: const Text(
-              'Сбросить счетчик?',
-              style: TextStyle(
+            backgroundColor: alertColor,
+            title: Text(
+              'Эсептегич баштапкы абалга келтирилсинби?',
+              style: GoogleFonts.nunito(
                 color: Colors.white,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
+                fontSize: 22,
               ),
             ),
-            content: const Text(
-              'Вы уверены, что хотите сбросить счетчик?',
-              style: TextStyle(
+            content: Text(
+              'Чын эле эсептегичти баштапкы абалга келтиргиңиз келеби?',
+              style: GoogleFonts.nunito(
                 color: Colors.white,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
+                fontSize: 13,
               ),
             ),
             actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(false),
-                child: const Text('Нет', style: TextStyle(color: Colors.white)),
+              InkWell(
+                borderRadius: BorderRadius.circular(30),
+                onTap: () => Navigator.of(context).pop(false),
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Text(
+                    'Жок',
+                    style: GoogleFonts.nunito(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
               ),
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(true),
-                child: const Text('Да', style: TextStyle(color: Colors.white)),
+              InkWell(
+                borderRadius: BorderRadius.circular(30),
+                onTap: () => Navigator.of(context).pop(true),
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Text(
+                    'Ооба',
+                    style: GoogleFonts.nunito(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
@@ -87,12 +113,12 @@ class TasbihPageState extends State<TasbihPage> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final containerColor = isDark ? Colors.grey[900] : const Color(0xff16423C);
+    // final isDark = Theme.of(context).brightness == Brightness.dark;
+    // final containerColor = isDark ? Colors.grey[900] : const Color(0xff16423C);
     // final textColor = isDark ? Colors.black : Colors.white; // <--- добавьте это
 
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Color(0xff212121),
       appBar: AppBar(
         // backgroundColor: const Color(0xff16423C),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -116,15 +142,16 @@ class TasbihPageState extends State<TasbihPage> {
                   width: 320,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: containerColor,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xff212121),
+
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   child: Center(
                     child: Text(
-                      'Чоң баскычты басканда, эсепке бирөө кошулат',
-                      style: TextStyless.salavatTitle.copyWith(
+                      '(Чоң баскычты басканда, эсепке бирөө кошулат)',
+                      style: TextStyless.blackTitle.copyWith(
                         fontSize: 15,
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -135,15 +162,20 @@ class TasbihPageState extends State<TasbihPage> {
                   width: 350,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: containerColor,
-                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xff212121),
+                    // gradient: LinearGradient(
+                    //   colors: [Colors.grey, Color(0xff16423C)],
+                    //   begin: Alignment.topCenter,
+                    //   end: Alignment.topRight,
+                    // ),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   child: Center(
                     child: Text(
-                      'Кичинекей баскычты басканда, эсептегич баштапкы абалга келтирилет',
+                      '(Кичинекей баскычты басканда, эсептегич баштапкы абалга келтирилет)',
                       style: TextStyless.salavatTitle.copyWith(
                         fontSize: 15,
-                        color: Colors.white,
+                        color: Colors.grey,
                       ),
                       textAlign: TextAlign.center,
                     ),
