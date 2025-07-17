@@ -49,7 +49,7 @@ class AppDrawer extends StatelessWidget {
           ),
           SwitchListTile(
             title: Text(
-              'Тёмный режим',
+              'Караңгы режим',
               style: GoogleFonts.nunito(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
