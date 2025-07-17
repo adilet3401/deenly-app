@@ -616,7 +616,7 @@ class _JavshannPageState extends State<JavshannPage> {
                 // ignore: deprecated_member_use
                 splashColor: Colors.white.withOpacity(0.3),
                 highlightColor: Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(30),
                 child: Container(
                   height: 70,
                   alignment: Alignment.center,
@@ -662,7 +662,7 @@ class _JavshannPageState extends State<JavshannPage> {
                 // ignore: deprecated_member_use
                 splashColor: Colors.white.withOpacity(0.3),
                 highlightColor: Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(30),
                 child: Container(
                   height: 70,
                   alignment: Alignment.center,
