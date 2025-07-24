@@ -73,7 +73,6 @@ class AppDrawer extends StatelessWidget {
             inactiveTrackColor:
                 Colors.grey.shade100, // Цвет трека в неактивном состоянии
           ),
-
           Divider(
             // color: themeData.dividerTheme.color, // Нежный серый цвет
             thickness: 1, // Толщина линии
