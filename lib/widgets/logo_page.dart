@@ -49,6 +49,7 @@ class _SplashScreenState extends State<SplashScreen>
       });
     });
   }
+
   @override
   void dispose() {
     _animationController.dispose();
@@ -58,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121212),
+      // backgroundColor: Colors.white, //0xff121212
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: Center(

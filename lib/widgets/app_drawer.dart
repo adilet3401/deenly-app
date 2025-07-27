@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
+import 'package:sabr/generated/l10n.dart';
 
 import '../theme/theme.dart';
 import '../timeeng/asr_page.dart';
@@ -82,7 +83,8 @@ class AppDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 13, top: 5, bottom: 5),
             child: Text(
-              'Намаз убактысы',
+              S.of(context).prayerTime,
+              // '',
               // textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.grey.shade500, // Светло-серый
@@ -175,8 +177,7 @@ class AppDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 13, top: 5, bottom: 5),
             child: Text(
-              'Жана башка маалыматтар',
-              // textAlign: TextAlign.center,
+              'Жана башка маалыматтар', //
               style: TextStyle(
                 color: Colors.grey.shade500, // Светло-серый
                 fontSize: 14, // Небольшой размер
@@ -198,20 +199,7 @@ class AppDrawer extends StatelessWidget {
             },
             isActive: ModalRoute.of(context)?.settings.name == '/tasbih',
           ),
-          // UbakytTar(
-          //   text: 'Сунуштар',
-          //   icon: Icons.help,
-          //   onTap: () {
-          //     Navigator.pushReplacement(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => const SunushPage(),
-          //         settings: const RouteSettings(name: '/sunush'),
-          //       ),
-          //     );
-          //   },
-          //   isActive: ModalRoute.of(context)?.settings.name == '/sunush',
-          // ),
+
           UbakytTar(
             text: "Наария салаваты",
             image: Image.asset('assets/pray.png', width: 28, height: 28),
