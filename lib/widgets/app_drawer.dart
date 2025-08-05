@@ -242,6 +242,17 @@ class AppDrawer extends StatelessWidget {
             },
             isActive: ModalRoute.of(context)?.settings.name == '/sunush',
           ),
+          SizedBox(height: 20),
+          Text(
+            '©2025 ADN',
+            style: GoogleFonts.nunito(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade600,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 50),
         ],
       ),
     );

@@ -599,6 +599,7 @@ class _JavshannPageState extends State<JavshannPage> {
                   fontWeight: FontWeight.bold,
                   color: Colors.red, // Основной цвет текста
                   // fontFamily: 'Roboto',
+                  
                 ),
                 children: _buildTextSpans(_text),
               ),
@@ -691,7 +692,7 @@ class _JavshannPageState extends State<JavshannPage> {
             style: TextStyle(
               color: Colors.black, // Цвет нумерованных строк
               fontWeight: FontWeight.bold,
-              fontSize: 17,
+              fontSize: 16,
             ),
           ),
         );

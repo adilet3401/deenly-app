@@ -64,10 +64,10 @@ class S {
     return Intl.message('Куптан', name: 'nightPrayer', desc: '', args: []);
   }
 
-  /// `Намаз убактыыы`
+  /// `Намаз убактысы`
   String get prayerTime {
     return Intl.message(
-      'Намаз убактыыы',
+      'Намаз убактысы',
       name: 'prayerTime',
       desc: '',
       args: [],
