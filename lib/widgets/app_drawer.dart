@@ -242,7 +242,7 @@ class AppDrawer extends StatelessWidget {
             },
             isActive: ModalRoute.of(context)?.settings.name == '/sunush',
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text(
             '©2025 ADN',
             style: GoogleFonts.nunito(
@@ -252,7 +252,7 @@ class AppDrawer extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 30),
         ],
       ),
     );
