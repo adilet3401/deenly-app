@@ -35,11 +35,11 @@ class _SplashScreenState extends State<SplashScreen>
           context,
           PageRouteBuilder(
             transitionDuration: const Duration(milliseconds: 500),
-            pageBuilder: (_, __, ___) => BagymdatPage(),
+            pageBuilder: (_, _, _) => BagymdatPage(),
             transitionsBuilder: (
               _,
               Animation<double> animation,
-              __,
+              _,
               Widget child,
             ) {
               return FadeTransition(opacity: animation, child: child);
@@ -63,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen>
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: Center(
-          child: Image.asset('assets/deenly2.png', width: 170, height: 170),
+          child: Image.asset('assets/deenly2.png', width: 150, height: 150),
         ),
       ),
     );
