@@ -187,7 +187,11 @@ class AppDrawer extends StatelessWidget {
           ),
           UbakytTar(
             text: 'Тасбих',
-            image: Image.asset("assets/beads.png", width: 28, height: 28),
+            image: Image.asset(
+              "assets/images/beads.png",
+              width: 28,
+              height: 28,
+            ),
             onTap: () {
               Navigator.pushReplacement(
                 context,
@@ -202,7 +206,7 @@ class AppDrawer extends StatelessWidget {
 
           UbakytTar(
             text: "Наария салаваты",
-            image: Image.asset('assets/pray.png', width: 28, height: 28),
+            image: Image.asset('assets/images/pray.png', width: 28, height: 28),
             isActive: ModalRoute.of(context)?.settings.name == '/salavat',
             onTap: () {
               Navigator.pushReplacement(
@@ -216,7 +220,11 @@ class AppDrawer extends StatelessWidget {
           ),
           UbakytTar(
             text: 'Жавшан',
-            image: Image.asset('assets/javshan.png', width: 28, height: 28),
+            image: Image.asset(
+              'assets/images/javshan.png',
+              width: 28,
+              height: 28,
+            ),
             isActive: ModalRoute.of(context)?.settings.name == '/javshan',
             onTap: () {
               Navigator.pushReplacement(
