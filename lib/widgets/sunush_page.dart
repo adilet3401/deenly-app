@@ -39,7 +39,7 @@ class SunushPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Image(
-                image: AssetImage('assets/happy.png'),
+                image: AssetImage('assets/images/happy.png'),
                 width: 120,
                 height: 120,
               ),

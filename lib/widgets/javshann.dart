@@ -586,7 +586,7 @@ class _JavshannPageState extends State<JavshannPage> {
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/books.jpg'),
+            image: AssetImage('assets/images/books.jpg'),
             fit: BoxFit.cover,
           ),
         ),
