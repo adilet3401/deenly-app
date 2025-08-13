@@ -171,6 +171,7 @@ class KuptanPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           "Куптан",
           style: GoogleFonts.nunito(

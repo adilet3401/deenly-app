@@ -569,6 +569,7 @@ class _JavshannPageState extends State<JavshannPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           _appBarTitle,
           style: GoogleFonts.nunito(
@@ -599,7 +600,6 @@ class _JavshannPageState extends State<JavshannPage> {
                   fontWeight: FontWeight.bold,
                   color: Colors.red, // Основной цвет текста
                   // fontFamily: 'Roboto',
-                  
                 ),
                 children: _buildTextSpans(_text),
               ),

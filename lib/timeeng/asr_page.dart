@@ -329,6 +329,7 @@ class AsrPage extends StatelessWidget {
     return Scaffold(
       // backgroundColor: const Color(0xffF2EFE7),
       appBar: AppBar(
+        centerTitle: true,
         // backgroundColor: Color(0xff16423C),
         title: Text(
           "Аср",

@@ -215,6 +215,7 @@ class ShamPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           "Шам",
           style: GoogleFonts.nunito(

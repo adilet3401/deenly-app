@@ -120,6 +120,7 @@ class TasbihPageState extends State<TasbihPage> {
     return Scaffold(
       backgroundColor: Color(0xff212121),
       appBar: AppBar(
+        centerTitle: true,
         // backgroundColor: const Color(0xff16423C),
         iconTheme: const IconThemeData(color: Colors.white),
         title: Text(

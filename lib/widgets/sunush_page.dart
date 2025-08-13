@@ -21,6 +21,7 @@ class SunushPage extends StatelessWidget {
     return Scaffold(
       // backgroundColor: const Color(0xffF2EFE7),
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Сунуштар',
           style: GoogleFonts.nunito(
