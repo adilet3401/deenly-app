@@ -63,7 +63,11 @@ class _SplashScreenState extends State<SplashScreen>
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: Center(
-          child: Image.asset('assets/deenlyLogo.png', width: 130, height: 130),
+          child: Image.asset(
+            'assets/images/deenlyLogo.png',
+            width: 130,
+            height: 130,
+          ),
         ),
       ),
     );
