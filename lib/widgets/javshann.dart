@@ -1425,7 +1425,7 @@ class _JavshannPageState extends State<JavshannPage> {
       } else {
         _pageNumber = 1;
       }
-      _appBarTitle = '$_pageNumber - баб';
+      _appBarTitle = '$_pageNumber - бап';
       _text = _texts[_pageNumber - 1];
     });
   }
@@ -1437,7 +1437,7 @@ class _JavshannPageState extends State<JavshannPage> {
       } else {
         _pageNumber = _texts.length;
       }
-      _appBarTitle = '$_pageNumber - баб';
+      _appBarTitle = '$_pageNumber - бап';
       _text = _texts[_pageNumber - 1];
     });
   }
@@ -1523,7 +1523,7 @@ class _JavshannPageState extends State<JavshannPage> {
                   if (selected != null && selected != _pageNumber) {
                     setState(() {
                       _pageNumber = selected;
-                      _appBarTitle = '$_pageNumber - баб';
+                      _appBarTitle = '$_pageNumber - бап';
                       _text = _texts[_pageNumber - 1];
                     });
                   }
