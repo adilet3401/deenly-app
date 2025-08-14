@@ -69,11 +69,11 @@ class SunushPage extends StatelessWidget {
                     GestureDetector(
                       onTap: () => _launchURL('https://wa.me/996505533770'),
                       child: Text(
-                        "+996 505 533 770",
+                        "WhatsApp",
                         style: GoogleFonts.nunito(
                           fontSize: 18,
                           color: Colors.blue,
-                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -91,13 +91,13 @@ class SunushPage extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     GestureDetector(
-                      onTap: () => _launchURL('https://t.me/sabr_3401'),
+                      onTap: () => _launchURL('https://t.me/adn3401'),
                       child: Text(
-                        "@sabr_3401",
+                        "Telegram",
                         style: GoogleFonts.nunito(
                           fontSize: 18,
                           color: Colors.blue,
-                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
