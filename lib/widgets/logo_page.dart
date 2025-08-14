@@ -58,15 +58,17 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bgColor = isDark ? Color(0xff1f2023) : Color(0xff16423C);
     return Scaffold(
-      // backgroundColor: Colors.white, //0xff121212
+      backgroundColor: bgColor,
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: Center(
           child: Image.asset(
-            'assets/images/deenlyLogo.png',
-            width: 130,
-            height: 130,
+            'assets/images/deenlylogo4.png',
+            width: 150,
+            height: 150,
           ),
         ),
       ),
