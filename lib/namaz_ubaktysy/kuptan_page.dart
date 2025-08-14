@@ -49,7 +49,17 @@ class KuptanPage extends StatelessWidget {
       ),
       TextItem(
         "«Аллооху лаа илааха иллаа хувал хаййул каййуум, лаа та-хузухуу синатун валаа наум, лаху маа фиссамааваати вамаа фил ард, ман заллазий йашфа'у 'индахуу иллаа би-изних, йа'ламу маа байна айдийхим вамаа холфахум валаа йухийтууна би шай-ин мин 'илмихии иллаа бимаа шаа-а, васи'а курсиййухус самааваати вал арди, валаа йа-уудухуу хифзухумаа ва хувал 'алиййул 'азыйм».'",
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem(
         'Намаз тасбихтери айтылат:',
@@ -58,7 +68,17 @@ class KuptanPage extends StatelessWidget {
       ),
       TextItem(
         'Субхааналлоох (33 жолу)\nАльхамду лиллах (33 жолу)\nАллооху акбар (33 жолу)',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
@@ -77,12 +97,32 @@ class KuptanPage extends StatelessWidget {
       ),
       TextItem(
         'Фа’лам аннаху (1 жолу)',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
         'Лаа илааха иллаллоох',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
@@ -160,7 +200,17 @@ class KuptanPage extends StatelessWidget {
       ),
       TextItem(
         "«Ааманар расуулу бимаа унзила илайхи мир Роббихии вал му-минуун, куллун аамана биллаахи ва малааикатихии ва кутубихии ва русулих, лаа нуфаррику baina ахадим мир-русулих, вакоолуу сами'наа ва ато'наа, гуфроонака Роббанаа ва иляйкал масыйр. Лаа йукаллифуллооху нафсан иллаа вус'ахаа, лахаа маа касабат ва 'алайхаа мактасабат, Роббанаа лаа ту-аахизнаа ин насийнаа ав ахто-наа, Роббанаа ва лаа тахмил 'алайнаа исрон камаа хамалтахуу 'алал лазийна мин каблинаа, Роббанаа ва лаа тухаммилнаа маа лаа тоокота ланаа бих, ва'фу 'аннаа вагфир ланаа вархамнаа, анта Мавлаанаа фансурнаа 'алал ковмил каафириин».",
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem(
         "СодакАллоохул 'Азыйм.",

@@ -14,7 +14,7 @@ class JavshannPage extends StatefulWidget {
 
 class _JavshannPageState extends State<JavshannPage> {
   int _pageNumber = 1;
-  String _appBarTitle = '1 - баб';
+  String _appBarTitle = '1 - бап';
   String _text = '''
 Аллахумма иннии ас'алука би асмааика
 
@@ -788,6 +788,7 @@ class _JavshannPageState extends State<JavshannPage> {
 Субхаанака йаа лаа илааха илла антал-амаанул-амаан,
 ажирнаа минанн-аар!''',
     '''Ва ас-алука би- асмааика 
+
 1. Йаа Афувву!
 2. Йаа Гофуур!
 3. Йаа Вадууд!

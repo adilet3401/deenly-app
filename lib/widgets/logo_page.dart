@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sabr/timeeng/bagymdat_page.dart';
+import 'package:sabr/namaz_ubaktysy/bagymdat_page.dart';
 import 'dart:async';
 
 // import 'package:sabr/widgets/home_page.dart'; // Для таймера

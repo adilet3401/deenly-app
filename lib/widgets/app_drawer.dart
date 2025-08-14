@@ -5,11 +5,11 @@ import 'package:provider/provider.dart';
 import 'package:sabr/generated/l10n.dart';
 
 import '../theme/theme.dart';
-import '../timeeng/asr_page.dart';
-import '../timeeng/bagymdat_page.dart';
-import '../timeeng/beshim_page.dart';
-import '../timeeng/kuptan_page.dart';
-import '../timeeng/sham_page.dart';
+import '../namaz_ubaktysy/asr_page.dart';
+import '../namaz_ubaktysy/bagymdat_page.dart';
+import '../namaz_ubaktysy/beshim_page.dart';
+import '../namaz_ubaktysy/kuptan_page.dart';
+import '../namaz_ubaktysy/sham_page.dart';
 
 import 'javshann.dart';
 import 'naariya_salavaty.dart';

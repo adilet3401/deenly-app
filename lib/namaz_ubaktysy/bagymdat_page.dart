@@ -1,50 +1,110 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sabr/text_styles/title_theme.dart';
-import 'package:sabr/widgets/app_drawer.dart';
 
-class AsrPage extends StatelessWidget {
-  const AsrPage({super.key});
+import 'package:google_fonts/google_fonts.dart';
+
+import 'package:sabr/text_styles/title_theme.dart';
+
+import '../widgets/app_drawer.dart';
+
+class BagymdatPage extends StatelessWidget {
+  const BagymdatPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<TextItem> texts = [
       TextItem(
-        'Аср намазынын парзы окулуп, салам берилгенден кийин:',
-        TextStyles.largeTitle(context),
+        'Багымдат намазынын парзын окуп, эки жакка салам бергенден кийин колду көтөрүп:',
+        TextStyles.largeTitle(context), // Передаём context
       ),
       TextItem(
         '«(Астагфируллах, 3 жолу) \n Аллохума антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икром»',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context), // Передаём context
         TextAlign.center,
       ),
       TextItem(
         'деп айтылат. Анан колдор көтөрүлүп, алакандар жайылып «Солаатан тунжина» дубасы окулат:',
-        TextStyles.redTitle(context),
+        TextStyles.redTitle(context), // Передаём context
       ),
       TextItem(
-        '«Аллоохумма солли ‘алаа саййидинаа Мухаммадин ва ‘алаа аали саййидинаа Мухаммад, солаатан тунжиина бихаа мин жамии’ил ахваали вал аафат. ("аафаат" деп айтып жатканда алакан төмөн, бүткөндө өйдө каратылат.) Ва тагдий ланаа бихаа жамии’ал хаажат, ва тутоххирунаа бихаа мин жамии’ис саййи’аат, ва тарфа’унаа бихаа ‘индака а’лад даражаат, ва тубаллиггунаа бихаа аксал гааяат, мин жамии’ил хайраати фил хаяати ва ба’дал мамаат, инахаллааху ‘алаа заалика, вал хамду лиллаахи Робб ‘ааламийн»',
-        TextStyles.blackTitle(context),
+        '«Аллоохумма солли ‘алаа саййидинаа Мухаммадин ва ‘алаа аали саййидинаа Мухаммад, солаатан тунжиина бихаа мин жамии’ил ахваали вал аафат. (“вал-аафаат” деп жаткан кезде алаканыбызды төмөн каратып, бүткөндөн кийин кайра мурунку абалына келтиребиз). Ва тагдий ланаа бихаа жамии’ал хаажат, ва тутоххирунаа бихаа мин жамии’ис саййи’аат, ва тарфа’унаа бихаа ‘индака а’лад даражаат, ва тубаллиггунаа бихаа аксал гааяат, мин жамии’ил хайраати фил хаяати ва ба’дал мамаат, инахаллааху ‘алаа заалика, вал хамду лиллаахи Робб ‘ааламийн»',
+        TextStyles.blackTitle(context), // Передаём context
       ),
       TextItem(
         'деп алакандар бетке сүрүлөт. Бул дубадан кийин тасбихат улантылат:',
+        TextStyles.redTitle(context), // Передаём context
+      ),
+      TextItem(
+        '«Аллоохумма иннаа нукаддиму илайка байна йадаай кулли нафсин ва лахматин ва лахзотин ва торфатын иатрфиу бихаа ахлус-самааваати ва ахлул ародийна; Ашхаду ан...',
+        TextStyles.blackTitle(context), // Передаём context
+      ),
+      TextItem('(бул жерге чейин 1 жолу окулат)', TextStyles.redTitle(context)),
+      TextItem(
+        'Лаа илааха иллаллооху вахдахуу лаа шарийка лах, лахул-мулку валахул-хамд ва хува ‘алаа кулли шай-ин кодиир» (10 жолу окулуп, 10-нуң аягында) «ва илайхил-масыйр» (кошулат)',
+        TextStyles.blackTitle(context),
+        //
+      ),
+      TextItem(
+        'Истиаза дубалары окулат (колдор көтөрүлүп, алакан төмөн каратылат):',
+        TextStyles.redTitle(context),
+        //
+      ),
+      TextItem(
+        '«Аллоохумма ажирнаа минан-наар» (3, 5 же 7 жолу окулат)',
+        TextStyles.blackTitle(context),
+        //
+      ),
+      TextItem(
+        '~Аллоохумма ажирнаа мин кулли наар. \n~Аллоохумма ажирнаа мин фитнатид-диниййати ва-д-дунийявиййа. \n~Аллоохумма ажирнаа мин фитнатил ахириз замаан. \n~Аллоохумма ажирнаа мин фитнатил масиихий-д-даж-жаали ва-с-суфйаан. \n~Аллоохумма ажирнаа мин дахлил-долаалаати вал бид’ий-йаати вал ахлаа-и-ка. \n~Аллоохумма ажирнаа мин шаррин нафсил аммааро.\n~Аллоохумма ажирнаа мин шурри нуфуусинаа аммаарооти фир’авниййаа. \n~Аллоохумма ажирнаа мин шаррин нисаа.\n~Аллоохумма ажирнаа мин балла-ин нисаа.\n~Аллоохумма ажирнаа мин фитнатин нисаа.\n~Аллоохумма ажирнаа мин ‘азаабил кобр.\n~Аллоохумма ажирнаа мин ‘азааби йаумил кыяама.\n~Аллоохумма ажирнаа мин ‘азааби жаханнам.\n~Аллоохумма ажирнаа мин ‘азааби кохрик.\n~Аллоохумма ажирнаа мин наари кохрик.\n~Аллоохумма ажирнаа мин ‘азаабил кобри ван нийроон.\n~Аллоохумма ажирнаа минар рийаа-и вас су’мати вал ’ужуби вал фахр.\n~Аллоохумма ажирнаа мин тахаавузил мулхийийн.\n~Аллоохумма ажирнаа мин шаррил мунаафикиин.\n~Аллоохумма ажирнаа мин фитнатил фаасикийн.\n~Аллоохумма ажирнаа ва ажир ваaлидайнаа ва толабаата Росул-ий нуру-с-сиййидил мукриййи фий хидматил кур-аан вал-иимаан, ва ахбаабааху минал мухлисиийна ва акрибаа-анаа ва ахдаа-анаа минан наар.»',
+        TextStyles.blackTitle(context),
+        //
+      ),
+      TextItem(
+        '(ушул жерде алакандар жогору каратылат)',
         TextStyles.redTitle(context),
       ),
       TextItem(
-        "«Субхааналлоохи вал хамду лиллаахи ва лаа илааха иллаллооху валлооху акбар, ва лаа хавла ва лаа куввата иллаа биллаахил 'алиййил 'азыйм ",
+        '«Би ‘афвика йаа Мужиир, бифадлика йаа Гоффаар. Аллоохумма адхилнал жанната ма’ал аброор».          (Бул 3 жолу айтылат)',
         TextStyles.blackTitle(context),
       ),
       TextItem(
-        'деп айтылат жана «Аятал Курси» окулат.',
+        '«Аллоохумма адхилнаа ва адхил устаазана ва ваалидайнаа ва толабата росаа-илин нуурис соодикйийна ва ихваанаанаа ва аховаатанаа ва акрибаа-анаа ва аждааданаа ва ахбаабанал му-миниинаал мухлисиийна фий хидматил иймаани вал Кур-аан, ал жанната ма’ал аброор, би шаафа’ати набийийикал мухтаар ва аалихийил атхаар ва асхаабийхил ахйаар васаллим маа даамал лайлу ван нахаар. Амин, вал хамду лиллаахи Роббил ‘ааламин».',
+        TextStyles.blackTitle(context),
+      ),
+      TextItem(
+        '(Алакандыр бетке суртуп)',
+        TextStyles.redTitle(context),
+        TextAlign.center,
+      ),
+      TextItem(
+        'Анан намаздын аягындагы тасбихтерге өтөбүз:',
         TextStyles.redTitle(context),
       ),
       TextItem(
-        'Бисмиллаахир Рахмаанир Рахиим.',
-        TextStyles.largeTitle(context),
+        '«Субхааналлоохи вал хамду лиллаахи ва лаа илааха иллаллооху валлооху акбар, ва лаа хавла ва лаа куввата илла биллаахил ‘алийийил ‘азыйм»',
+        TextStyles.blackTitle(context),
+        TextAlign.center,
       ),
       TextItem(
-        "«Аллооху лаа илааха иллаа хувал хаййул каййуум, лаа та-хузухуу синатун валаа наум, лаху маа фиссамааваати вамаа фил ард, ман заллазий йашфа'у 'индахуу иллаа би-изних, йа'ламу маа байна айдийхим вамаа холфахум валаа йухийтууна би шай-ин мин 'илмихии иллаа бимаа шаа-а, васи'а курсиййухус самааваати вал арди, валаа йа-уудухуу хифзухумаа ва хувал 'алиййул 'азыйм».'",
+        'деп айтылат жана «Аятул Курси» окулат:',
+        TextStyles.redTitle(context),
+      ),
+      TextItem(
+        "Бисмиллаахир Рахмаанир Рахиим.",
         TextStyles.blackTitle(context),
+      ),
+      TextItem(
+        '«Аллооху лаа илааха иллаа хувал хаййул каййуум,лаа та-хузухуу синатун валя наум, лаху маа фиссамааваати вамаа фил ард, ман заллазий йашфа’у ‘индахуу иллаа би-изних, йа’ламуу маа байна айдийхим вамаа холфахум валаа йухийтууна би шай-ин мин ‘ильмихий иллаа бимаа шаа-а, васи’а курсиййухус самааваати вал арди, валаа йа-уудухуу хифзухумаа ва хувал ‘алиййул ‘азыйм»',
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.2),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem(
         'Намаз тасбихтери айтылат:',
@@ -52,8 +112,18 @@ class AsrPage extends StatelessWidget {
         TextAlign.center,
       ),
       TextItem(
-        'Субхааналлоох (33 жолу)\nАльхамду лиллах (33 жолу)\nАллооху акбар (33 жолу)',
-        TextStyles.blackTitle(context),
+        'Субхааналлоох (33 жолу)\nАльхамдулиллах (33 жолу)\nАллооху акбар (33 жолу)',
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
@@ -61,7 +131,7 @@ class AsrPage extends StatelessWidget {
         TextStyles.blackTitle(context),
       ),
       TextItem(
-        '(деп айтылып дуа кылынат)',
+        '(деп айтылып дуа кылынат.)',
         TextStyles.redTitle(context),
         TextAlign.center,
       ),
@@ -72,18 +142,37 @@ class AsrPage extends StatelessWidget {
       ),
       TextItem(
         'Фа’лам аннаху (1 жолу)',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
         'Лаа илааха иллаллоох',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
-        '(33 жолу окулат)',
+        '(33 жолу окулат. Каалагандар багымдат жана куптан намаздардан кийин 100 жолу окуса болот.)',
         TextStyles.redTitle(context),
-        TextAlign.center,
       ),
       TextItem(
         '«Мухаммадун Расуулуллоохи соллаллооху та’аалаа ‘алайхи ва саллам»',
@@ -91,12 +180,20 @@ class AsrPage extends StatelessWidget {
       ),
       TextItem('Андан соң:', TextStyles.redTitle(context), TextAlign.center),
       TextItem(
+        '«Лаа илааха иллаллоох ал маликул хаккул мубийн, Мухаммадун расуулуллооху соодийку ва’дил аамин».',
+        TextStyles.blackTitle(context),
+      ),
+      TextItem(
+        '(Багымдат намазда гана 10 жолу окулат.)',
+        TextStyles.redTitle(context),
+      ),
+      TextItem(
         'Тасбихаттан кийин салават-саламдар окулат:',
         TextStyles.redTitle(context),
       ),
       TextItem(
         'Бисмиллаахир Рохмаанир Рахиим.',
-        TextStyles.largeTitle(context),
+        TextStyles.blackTitle(context),
       ),
       TextItem(
         "~ Инналлооха ва малаа-икатаху йусоллууна 'алан набий, йаа айюхаллазийна аамануус соллу'алайхи васаллимуу таслиймаа, лаббайк!.",
@@ -113,7 +210,7 @@ class AsrPage extends StatelessWidget {
       TextItem(
         "~ Аллоохумма солли 'алаа саййидиина Мухаммадин ва 'алаа аали саййидиина Мухаммад, би ‘адади кулли даа-ин ва даваа-ин ва баарик васаллим 'алайхи ва алайхим касийрон касийроо.",
         TextStyles.blackTitle(context),
-      ), //
+      ),
       TextItem(
         "~ Солли васаллим йаа Робби ‘алаа хабийбика Мухаммадин ва 'алаа жамии’ил анбийаа-и вал мурсалийн, ва 'алаа аали куллин ва сохби куллин ажма’иин. Аамиин, вал хамду лиллаахи Роббил 'ааламиин.",
         TextStyles.blackTitle(context),
@@ -308,7 +405,7 @@ class AsrPage extends StatelessWidget {
         TextStyles.blackTitle(context),
       ),
       TextItem(
-        "«Набаа» сүрөсүнүн 31-40 аяттары окулат:",
+        "«Хашр» сүрөсүнүн 20-24 аяттары окулат:",
         TextStyles.redTitle(context),
       ),
       TextItem(
@@ -316,26 +413,35 @@ class AsrPage extends StatelessWidget {
         TextStyles.largeTitle(context),
       ),
       TextItem(
-        "«Инна лил муттакийна мафаазан хадаа-ико ва а'наабаа, ва каваа'иба атрообаа, ва каа-сан дихаакоо. Лаа йасма'ууна фийхаа лагвав валаа киззаабаа, жазаа-ан мин Роббика 'атоо-ан хисаабаа Роббис самааваати вал арди вамаа байнахумар Рохмаани лаа йаамликууна минху хитообаа, Йаума якуумур рууху вал малаа-икату соффаа, лаа ятакалламууна иллаа ман азина лахур Рохмаану ва коола соваабаа Зааликал йаумул хакк, фаман шаа-аттахоза илаа Роббихии ма-аабаа. Иннаа анзарнаакум азаабан Кориибаа, йаума йаанзурул мар-у маа коддамат ядааху ва якуулул каафиру йаа лайтании кунту турообаа».",
-        TextStyles.blackTitle(context),
+        "«Лаа яставии асхаабун наари ва асхаабул жанна, асхаабул жаннати хумул фаа-изуун. Лау анзалнаа хаазал кур-аана 'алаа жабалин ларо-айтаху хооши'ан мутасоди'ан мин хошйатиллаах ва тилкал-амсаалу надрибухаа линнааси ла'аллахум ятафаккаруун. Хуваллоохуллазий лаа илааха иллаа хуу, 'Аалимул гойби вашшахаадати хувар Рохмаанур Рахиим. Хуваллоохуллазий лаа илааха иллаа хуу, ал Маликул Куддуусус Салаамул Му-минул Мухайминул Азийзул Жаббаарул Мутакаббир, Субхааналлоохи аммаа йушрикуун. Хуваллоохул Хооликул Баари'ул Мусоввиру лахул асмаа-ул хуснаа, йусаббиху лахуу маа фис самааваати вал-ард, ва хувал Азийзул Хакиим».",
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.3, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem(
-        "СодакАллоохул 'Азыйм.",
+        "СодакАллоохул Азыйм.",
         TextStyles.redTitle(context),
         TextAlign.center,
       ),
     ];
-
     return Scaffold(
       // backgroundColor: const Color(0xffF2EFE7),
       appBar: AppBar(
         centerTitle: true,
-        // backgroundColor: Color(0xff16423C),
+        // backgroundColor: const Color(0xff16423C),
         title: Text(
-          "Аср",
+          "Багымдат",
           style: GoogleFonts.nunito(
-            fontWeight: FontWeight.bold,
             color: Colors.white,
+            fontWeight: FontWeight.bold,
           ),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -350,8 +456,10 @@ class AsrPage extends StatelessWidget {
           itemBuilder:
               (context, index) => Text(
                 texts[index].text,
-                style: texts[index].style, // Используйте стиль из темы
-                textAlign: texts[index].textAlign ?? TextAlign.start,
+                style: texts[index].style,
+                textAlign:
+                    texts[index].textAlign ??
+                    TextAlign.start, // Добавлено textAlign
                 softWrap: true,
               ),
         ),

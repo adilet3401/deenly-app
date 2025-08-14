@@ -38,12 +38,32 @@ class ShamPage extends StatelessWidget {
       ),
       TextItem(
         "Фа’лам аннаху (1 жолу)",
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
         "«Лаа илааха иллаллооху вахдахуу лаа шарийка лах, лахул мульку ва лахул хамду юхйий ва йумиит, ва хува хаййун лаа ямуут, биадийхил хайр, ва хува ‘алаа кулли шай-ин кодиир, ва илайхил масиир»   (10 жолу окулуп, 10-нун аягында)",
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem("ва илайхил масыйр (кошулат).", TextStyles.blackTitle(context)),
       TextItem(
@@ -89,7 +109,17 @@ class ShamPage extends StatelessWidget {
       ),
       TextItem(
         "«Аллооху лаа илааха иллаа хувал хаййул каййуум, лаа та-хузухуу синатун валаа наум, лаху маа фиссамааваати вамаа фил ард, ман заллазий йашфа'у 'индахуу иллаа би-изних, йа'ламу маа байна айдийхим вамаа холфахум валаа йухийтууна би шай-ин мин 'илмихии иллаа бимаа шаа-а, васи'а курсиййухус самааваати вал арди, валаа йа-уудухуу хифзухумаа ва хувал 'алиййул 'азыйм».'",
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem(
         'Намаз тасбихтери айтылат:',
@@ -98,7 +128,17 @@ class ShamPage extends StatelessWidget {
       ),
       TextItem(
         'Субхааналлоох (33 жолу)\nАльхамду лиллах (33 жолу)\nАллооху акбар (33 жолу)',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
@@ -116,12 +156,32 @@ class ShamPage extends StatelessWidget {
       ),
       TextItem(
         'Фа’лам аннаху (1 жолу)',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
         'Лаа илааха иллаллоох',
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
         TextAlign.center,
       ),
       TextItem(
@@ -204,7 +264,17 @@ class ShamPage extends StatelessWidget {
       ),
       TextItem(
         "«Лаа яставии асхаабун наари ва асхаабул жанна, асхаабул жаннати хумул фаа-изуун. Лау анзалнаа хаазал кур-аана 'алаа жабалин ларо-айтаху хооши'ан мутасоди'ан мин хошйатиллаах ва тилкал-амсаалу надрибухаа линнааси ла'аллахум ятафаккаруун. Хуваллоохуллазий лаа илааха иллаа хуу, 'Аалимул гойби вашшахаадати хувар Рохмаанур Рахиим. Хуваллоохуллазий лаа илааха иллаа хуу, ал Маликул Куддуусус Салаамул Му-минул Мухайминул Азийзул Жаббаарул Мутакаббир, Субхааналлоохи аммаа йушрикуун. Хуваллоохул Хооликул Баари'ул Мусоввиру лахул асмаа-ул хуснаа, йусаббиху лахуу маа фис самааваати вал-ард, ва хувал Азийзул Хакиим».",
-        TextStyles.blackTitle(context),
+        TextStyles.blackTitle(context).copyWith(
+          color: Colors.green,
+          shadows: [
+            Shadow(
+              // ignore: deprecated_member_use
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0.5, 1),
+              blurRadius: 1,
+            ),
+          ],
+        ),
       ),
       TextItem(
         "СодакАллоохул 'Азийм.",
