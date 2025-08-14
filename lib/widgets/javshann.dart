@@ -1607,7 +1607,7 @@ class _PagePickerDialog extends StatelessWidget {
             final pageNumber = index + 1;
             return RadioListTile<int>(
               title: Text(
-                '$pageNumber - баб',
+                '$pageNumber - бап',
                 style: GoogleFonts.nunito(
                   color: textColor,
                   fontWeight: FontWeight.bold,

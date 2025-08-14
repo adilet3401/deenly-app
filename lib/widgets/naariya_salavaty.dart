@@ -102,7 +102,17 @@ class _NaariyaSalavatState extends State<NaariyaSalavat> {
               child: Center(
                 child: Text(
                   "«Аллахумма салли салятан камилятан васаллим саляман тамман ‘аля сайидина Мухамадини-ллязи танхалю бихиль-‘укаду ватанфариджу бихиль-курабу ватукза бихиль-хаваиджу ватуналю бихи-рагаибу вахуснуль-хаватим. Ваюстаскаль-гамаму биваджхихиль-кярими ва‘аля алихи ва сахбихи фи кули лямхатин ванафасин би'адади кули ма‘люммин ляк».",
-                  style: TextStyles.salavatTitle(context),
+                  style: TextStyles.salavatTitle(context).copyWith(
+                    color: Colors.green,
+                    shadows: [
+                      Shadow(
+                        // ignore: deprecated_member_use
+                        color: Colors.black.withOpacity(0.3),
+                        offset: const Offset(0.5, 1),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ),
