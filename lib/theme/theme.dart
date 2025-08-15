@@ -26,6 +26,12 @@ class ThemeProvider with ChangeNotifier {
     ),
     drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
     dividerTheme: DividerThemeData(color: Colors.grey.shade400),
+    // cardColor: Colors.grey[100], // Цвет карточек
+    cardTheme: CardThemeData(
+      color: Colors.white, // Цвет карточек
+      shadowColor: Colors.grey.shade300,
+      elevation: 4,
+    ),
   );
 
   ThemeData get darkTheme => ThemeData(
@@ -44,6 +50,10 @@ class ThemeProvider with ChangeNotifier {
     ),
     drawerTheme: DrawerThemeData(backgroundColor: Color(0xff1f2023)),
     dividerTheme: DividerThemeData(color: Colors.grey.shade200),
+    cardTheme: CardThemeData(
+      color: Color(0xff191b1e), // Цвет карточеk
+      elevation: 4,
+    ),
   );
 
   void toggleTheme() {

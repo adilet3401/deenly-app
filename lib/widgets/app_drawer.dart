@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 import 'package:sabr/generated/l10n.dart';
+import 'package:sabr/widgets/uhudbard_page.dart';
 
 import '../theme/theme.dart';
 import '../namaz_ubaktysy/asr_page.dart';
@@ -249,6 +250,24 @@ class AppDrawer extends StatelessWidget {
               );
             },
             isActive: ModalRoute.of(context)?.settings.name == '/sunush',
+          ),
+          UbakytTar(
+            text: 'Ухуд - Бадр',
+            image: Image.asset(
+              'assets/images/sword.png',
+              width: 28,
+              height: 28,
+            ),
+            isActive: ModalRoute.of(context)?.settings.name == '/uhud-badr',
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => UhudBadrPage(),
+                  settings: const RouteSettings(name: '/uhud-badr'),
+                ),
+              );
+            },
           ),
           SizedBox(height: 10),
           Text(
