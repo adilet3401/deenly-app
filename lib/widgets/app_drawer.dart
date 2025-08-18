@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 import 'package:sabr/generated/l10n.dart';
+import 'package:sabr/widgets/prayer_time.dart';
 import 'package:sabr/widgets/uhudbard_page.dart';
 
 import '../theme/theme.dart';
@@ -48,6 +49,24 @@ class AppDrawer extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
+          ),
+          UbakytTar(
+            text: 'Намаз убактысы',
+            image: Image.asset(
+              'assets/images/clock-2.png',
+              width: 27,
+              height: 27,
+            ),
+            isActive: ModalRoute.of(context)?.settings.name == '/prayer_time',
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PrayerTime(),
+                  settings: const RouteSettings(name: '/prayer_time'),
+                ),
+              );
+            },
           ),
           SwitchListTile(
             title: Text(
