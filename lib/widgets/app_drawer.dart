@@ -3,7 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 import 'package:sabr/generated/l10n.dart';
-import 'package:sabr/widgets/prayer_time.dart';
+import 'package:sabr/widgets/ashabu_uhud_page.dart';
+// import 'package:sabr/widgets/prayer_time.dart';
 import 'package:sabr/widgets/ashabu_badr_page.dart';
 
 import '../theme/theme.dart';
@@ -50,24 +51,24 @@ class AppDrawer extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          UbakytTar(
-            text: 'Намаз убактысы',
-            image: Image.asset(
-              'assets/images/clock-2.png',
-              width: 27,
-              height: 27,
-            ),
-            isActive: ModalRoute.of(context)?.settings.name == '/prayer_time',
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const PrayerTime(),
-                  settings: const RouteSettings(name: '/prayer_time'),
-                ),
-              );
-            },
-          ),
+          // UbakytTar(
+          //   text: 'Намаз убактысы',
+          //   image: Image.asset(
+          //     'assets/images/clock-2.png',
+          //     width: 27,
+          //     height: 27,
+          //   ),
+          //   isActive: ModalRoute.of(context)?.settings.name == '/prayer_time',
+          //   onTap: () {
+          //     Navigator.pushReplacement(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => const PrayerTime(),
+          //         settings: const RouteSettings(name: '/prayer_time'),
+          //       ),
+          //     );
+          //   },
+          // ),
           SwitchListTile(
             title: Text(
               'Караңгы режим',
@@ -277,13 +278,31 @@ class AppDrawer extends StatelessWidget {
               width: 28,
               height: 28,
             ),
-            isActive: ModalRoute.of(context)?.settings.name == '/uhud-badr',
+            isActive: ModalRoute.of(context)?.settings.name == '/ashabu-badr',
             onTap: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => AshabuBadrPage(),
-                  settings: const RouteSettings(name: '/uhud-badr'),
+                  settings: const RouteSettings(name: '/ashabu-badr'),
+                ),
+              );
+            },
+          ),
+          UbakytTar(
+            text: 'Асхабу Ухуд дуасы',
+            image: Image.asset(
+              'assets/images/sword.png',
+              width: 28,
+              height: 28,
+            ),
+            isActive: ModalRoute.of(context)?.settings.name == '/ashabu-uhud',
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AshabuUhudPage(),
+                  settings: const RouteSettings(name: '/ashabu-uhud'),
                 ),
               );
             },
