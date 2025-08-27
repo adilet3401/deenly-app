@@ -16,7 +16,7 @@
     </queries>
 
     <application
-        android:label="deenly"
+        android:label="Намаз Тасбихаты"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
