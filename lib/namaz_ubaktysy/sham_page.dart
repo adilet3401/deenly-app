@@ -296,18 +296,22 @@ class ShamPage extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       drawer: AppDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: ListView.separated(
-          itemCount: texts.length,
-          separatorBuilder: (context, index) => const SizedBox(height: 15),
-          itemBuilder:
-              (context, index) => Text(
-                texts[index].text,
-                style: texts[index].style,
-                textAlign: texts[index].textAlign ?? TextAlign.start,
-                softWrap: true,
-              ),
+      body: Scrollbar(
+        trackVisibility: true,
+        radius: Radius.circular(20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: ListView.separated(
+            itemCount: texts.length,
+            separatorBuilder: (context, index) => const SizedBox(height: 15),
+            itemBuilder:
+                (context, index) => Text(
+                  texts[index].text,
+                  style: texts[index].style,
+                  textAlign: texts[index].textAlign ?? TextAlign.start,
+                  softWrap: true,
+                ),
+          ),
         ),
       ),
     );

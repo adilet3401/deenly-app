@@ -9,6 +9,6 @@ final themeData = ThemeData(
     seedColor: primaryColor,
     brightness: Brightness.dark,
   ),
-  appBarTheme: AppBarTheme(color: Color(0xff948979)),
+  appBarTheme: AppBarTheme(backgroundColor: Color(0xff948979)),
   useMaterial3: true,
 );

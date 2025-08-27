@@ -1614,8 +1614,10 @@ class _PagePickerDialog extends StatelessWidget {
                 ),
               ),
               value: pageNumber,
+              // ignore: deprecated_member_use
               groupValue: currentPage,
               activeColor: isDark ? Colors.orange : Color(0xff16423C),
+              // ignore: deprecated_member_use
               onChanged: (value) {
                 Navigator.of(context).pop(value);
               },

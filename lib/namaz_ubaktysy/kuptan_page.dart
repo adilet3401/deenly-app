@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:sabr/generated/l10n.dart';
 import 'package:sabr/text_styles/title_theme.dart';
 import 'package:sabr/widgets/app_drawer.dart';
 
@@ -232,18 +233,22 @@ class KuptanPage extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       drawer: AppDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: ListView.separated(
-          itemCount: texts.length,
-          separatorBuilder: (context, index) => const SizedBox(height: 15),
-          itemBuilder:
-              (context, index) => Text(
-                texts[index].text,
-                style: texts[index].style,
-                textAlign: texts[index].textAlign ?? TextAlign.start,
-                softWrap: true,
-              ),
+      body: Scrollbar(
+        trackVisibility: true,
+        radius: Radius.circular(20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: ListView.separated(
+            itemCount: texts.length,
+            separatorBuilder: (context, index) => const SizedBox(height: 15),
+            itemBuilder:
+                (context, index) => Text(
+                  texts[index].text,
+                  style: texts[index].style,
+                  textAlign: texts[index].textAlign ?? TextAlign.start,
+                  softWrap: true,
+                ),
+          ),
         ),
       ),
     );

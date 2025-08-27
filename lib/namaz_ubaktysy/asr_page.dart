@@ -391,19 +391,23 @@ class AsrPage extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       drawer: AppDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: ListView.separated(
-          itemCount: texts.length,
-          separatorBuilder:
-              (context, index) => const SizedBox(height: 15), // Авто-отступ
-          itemBuilder:
-              (context, index) => Text(
-                texts[index].text,
-                style: texts[index].style, // Используйте стиль из темы
-                textAlign: texts[index].textAlign ?? TextAlign.start,
-                softWrap: true,
-              ),
+      body: Scrollbar(
+        radius: Radius.circular(20),
+        trackVisibility: true,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: ListView.separated(
+            itemCount: texts.length,
+            separatorBuilder:
+                (context, index) => const SizedBox(height: 15), // Авто-отступ
+            itemBuilder:
+                (context, index) => Text(
+                  texts[index].text,
+                  style: texts[index].style, // Используйте стиль из темы
+                  textAlign: texts[index].textAlign ?? TextAlign.start,
+                  softWrap: true,
+                ),
+          ),
         ),
       ),
     );

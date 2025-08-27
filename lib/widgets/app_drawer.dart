@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sabr/generated/l10n.dart';
 import 'package:sabr/widgets/prayer_time.dart';
-import 'package:sabr/widgets/uhudbard_page.dart';
+import 'package:sabr/widgets/ashabu_badr_page.dart';
 
 import '../theme/theme.dart';
 import '../namaz_ubaktysy/asr_page.dart';
@@ -271,7 +271,7 @@ class AppDrawer extends StatelessWidget {
             isActive: ModalRoute.of(context)?.settings.name == '/sunush',
           ),
           UbakytTar(
-            text: 'Ухуд - Бадр',
+            text: 'Асхабу Бадр дуасы',
             image: Image.asset(
               'assets/images/sword.png',
               width: 28,
@@ -282,7 +282,7 @@ class AppDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => UhudBadrPage(),
+                  builder: (context) => AshabuBadrPage(),
                   settings: const RouteSettings(name: '/uhud-badr'),
                 ),
               );
