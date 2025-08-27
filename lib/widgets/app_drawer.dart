@@ -87,7 +87,7 @@ class AppDrawer extends StatelessWidget {
             onChanged: (bool value) {
               Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
             },
-            activeColor:
+            activeThumbColor:
                 Colors.orange, // Цвет переключателя в активном состоянии
             inactiveThumbColor:
                 Colors.grey, // Цвет переключателя в неактивном состоянии
