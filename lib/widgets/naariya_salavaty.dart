@@ -40,6 +40,11 @@ class _NaariyaSalavatState extends State<NaariyaSalavat> {
       _counter++;
     });
     await _prefs.setInt('counter', _counter);
+
+    // Вибрация при каждом кратном 100
+    if (_counter % 100 == 0 && _counter != 0 && await Vibration.hasVibrator()) {
+      Vibration.vibrate(duration: 500);
+    }
   }
 
   Future<void> _resetCounter() async {

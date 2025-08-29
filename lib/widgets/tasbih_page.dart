@@ -34,6 +34,11 @@ class TasbihPageState extends State<TasbihPage> {
     });
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('counter', _counter);
+
+    // Вибрация при каждом кратном 33
+    if (_counter % 33 == 0 && _counter != 0 && await Vibration.hasVibrator()) {
+      Vibration.vibrate(duration: 500);
+    }
   }
 
   Future<void> _resetCounter() async {

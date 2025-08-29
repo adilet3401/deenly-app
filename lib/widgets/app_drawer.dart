@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sabr/generated/l10n.dart';
 import 'package:sabr/widgets/ashabu_uhud_page.dart';
-// import 'package:sabr/widgets/prayer_time.dart';
 import 'package:sabr/widgets/ashabu_badr_page.dart';
 
 import '../theme/theme.dart';
@@ -309,7 +308,7 @@ class AppDrawer extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-            '©2025 ADN',
+            '©2025 Adilet Dildeev',
             style: GoogleFonts.nunito(
               fontSize: 12,
               fontWeight: FontWeight.bold,
