@@ -308,7 +308,7 @@ class AppDrawer extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-            '©2025 Adilet Dildeev',
+            '©2025 ADN',
             style: GoogleFonts.nunito(
               fontSize: 12,
               fontWeight: FontWeight.bold,
